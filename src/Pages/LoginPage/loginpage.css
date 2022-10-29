@@ -1,9 +1,7 @@
 .div {
     display: grid;
-
     height: 100vh;
-    grid-template-rows: 27.5% 1fr;
-
+    grid-template-rows: 30% 1fr;
 }
 
 .div .top {
@@ -16,7 +14,7 @@
 }
 
 .div .top img {
-    width: 3rem;
+    width: 3.3rem;
     margin: 0 auto;
     margin-top: -1.5rem;
 }
@@ -24,4 +22,27 @@
 .div .top h1 {
     color: #fff;
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.div .bottom {
+    padding: 1.2rem;
+}
+
+.div .bottom form,
+.bottom form div {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.div .bottom form div input,
+.bottom form button {
+    border-radius: 10px;
+    border: 1px solid #828282;
+    padding: 1.1rem 1rem;
+    font-size: 16px;
+}
+
+.bottom form button {
+    color: #fff;
+    background: #313163;
 }

@@ -13,8 +13,8 @@ function LoginPage() {
       <div className="bottom">
         <form action="">
           <div>
-            <input type="email" />
-            <input type="password" />
+            <input type="email" placeholder="Email Address" />
+            <input type="password" placeholder="Password" />
           </div>
           <button type="submit">LOGIN</button>
         </form>
