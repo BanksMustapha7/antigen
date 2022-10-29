@@ -1,0 +1,27 @@
+.div {
+    display: grid;
+
+    height: 100vh;
+    grid-template-rows: 27.5% 1fr;
+
+}
+
+.div .top {
+    background-image: url(../../assets/Group\ 290.png);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+}
+
+.div .top img {
+    width: 3rem;
+    margin: 0 auto;
+    margin-top: -1.5rem;
+}
+
+.div .top h1 {
+    color: #fff;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
