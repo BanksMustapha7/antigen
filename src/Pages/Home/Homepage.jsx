@@ -1,12 +1,7 @@
 import React from "react";
-
+import LoginPage from "../LoginPage/LoginPage";
 function Homepage() {
-  return (
-    <div>
-      <h1>Demo</h1>
-      <p>Navigate through browser links</p>
-    </div>
-  );
+  return <LoginPage />;
 }
 
 export default Homepage;

@@ -22,13 +22,13 @@ function LoginPage() {
         <hr />
 
         <div className="authbox">
-          <button>
+          <button className="google">
             <img src={Google} alt="google" />
-            SIGN IN WITH GMAIL
+            <span>SIGN IN WITH GMAIL</span>
           </button>
-          <button>
+          <button className="fb">
             <img src={Fb} alt="FB" />
-            CONTINUE WITH FACEBOOK
+            <span>CONTINUE WITH FACEBOOK</span>
           </button>
         </div>
 

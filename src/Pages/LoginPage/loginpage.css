@@ -35,7 +35,8 @@
 }
 
 .div .bottom form div input,
-.bottom form button {
+.bottom form button,
+.authbox button {
     border-radius: 10px;
     border: 1px solid #828282;
     padding: 1.1rem 1rem;
@@ -45,4 +46,40 @@
 .bottom form button {
     color: #fff;
     background: #313163;
+}
+
+.authbox {
+    width: 100%;
+    display: grid;
+    gap: 1.2rem;
+}
+
+.authbox button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.authbox .google {
+    border: 1px solid #313163;
+    border-radius: 5px !important;
+    background: #fff;
+}
+
+.authbox .fb {
+    background: #ACDBFF;
+    border: unset;
+    border-radius: 5px;
+}
+
+.bottom h4 {
+    color: #4f4f4f;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+}
+
+.bottom h4 span {
+    text-decoration: underline;
 }
