@@ -1,0 +1,164 @@
+.div {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: 30% 1fr;
+}
+
+.div .top {
+    background-image: url(../assets/Group\ 290.png);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+}
+
+.div .top img {
+    width: 3.3rem;
+    margin: 0 auto;
+    margin-top: -1.5rem;
+}
+
+.div .top h1 {
+    color: #fff;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.div .bottom {
+    /* border: 1px dashed red; */
+    padding: 1.2rem;
+}
+
+.div .bottom form,
+.bottom form div {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.div .bottom form div input,
+.bottom form button,
+.authbox button {
+    border-radius: 10px;
+    border: 1px solid #828282;
+    padding: 1.1rem 1rem;
+    font-size: 16px;
+}
+
+.div .bottom form div input {
+    -webkit-transition: .1s;
+    transition: .1s;
+    outline: none;
+}
+
+.div .bottom form div input:focus {
+    border: 2px solid rgb(212, 183, 16);
+}
+
+.bottom form button {
+    color: #fff;
+    background: #313163;
+}
+
+.bottom hr {
+    background-color: #000;
+    margin: 3rem 0;
+}
+
+.authbox {
+    width: 100%;
+    display: grid;
+    gap: 1.4rem;
+}
+
+.authbox button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.authbox .google {
+    border: 1px solid #313163;
+    border-radius: 5px !important;
+    background: #fff;
+}
+
+.authbox .fb {
+    background: #ACDBFF;
+    border: unset;
+    border-radius: 5px;
+}
+
+.bottom h4 {
+    color: #4f4f4f;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+}
+
+.bottom h4 span {
+    text-decoration: underline;
+}
+
+.click {
+    cursor: pointer;
+}
+
+.click:active {
+    transform: scale(.99);
+}
+
+.require small {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.required {
+    height: 14px;
+    width: 14px;
+}
+
+@media screen and (min-width: 768px) {
+    .div {
+        background-image: linear-gradient(#a69be79d, #313163), url(../assets/Group\ 290.png);
+        background-position: center;
+        background-size: cover;
+        grid-template-rows: max-content auto;
+        place-content: bottom;
+        min-height: 90vh;
+        padding: 3rem 0;
+    }
+
+    .div .top {
+        background-image: unset;
+    }
+
+    .div .top {
+        padding: unset;
+
+    }
+
+    .div .top img {
+        margin: 0 auto;
+    }
+
+    .div .bottom {
+        margin: 0 auto;
+        min-width: 450px;
+        padding: 2rem;
+        background-color: #fff;
+        height: max-content;
+        border-radius: 20px;
+    }
+
+    .bottom h4 {
+        /* color: #fff; */
+    }
+
+    .authbox .google {
+        /* border: unset; */
+    }
+}

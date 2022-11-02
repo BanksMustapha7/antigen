@@ -1,5 +1,5 @@
 import React from "react";
-import "./loginpage.css";
+import "../loginpage.css";
 import Group287 from "../../assets/Group287.png";
 import Google from "../../assets/google.png";
 import Fb from "../../assets/fb.png";
@@ -16,17 +16,19 @@ function LoginPage() {
             <input type="email" placeholder="Email Address" />
             <input type="password" placeholder="Password" />
           </div>
-          <button type="submit">LOGIN</button>
+          <button type="submit" className="click">
+            LOGIN
+          </button>
         </form>
 
         <hr />
 
         <div className="authbox">
-          <button className="google">
+          <button className="google click">
             <img src={Google} alt="google" />
             <span>SIGN IN WITH GMAIL</span>
           </button>
-          <button className="fb">
+          <button className="fb click">
             <img src={Fb} alt="FB" />
             <span>CONTINUE WITH FACEBOOK</span>
           </button>
