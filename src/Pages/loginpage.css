@@ -109,6 +109,11 @@
     padding: 1.25rem;
 }
 
+.fp_div .top button {
+    background: transparent;
+    border: none;
+}
+
 .fp_div .top img {
     width: 10px;
 }
@@ -135,20 +140,23 @@
 .fp_div .body form input {
     border: 1px solid #828282;
     border-radius: 10px;
-    padding: .5rem;
+    padding: .725rem;
     font-size: 15px;
     outline: none;
 }
 
-.fp_div .body form button {
+.fp_div .fp_button {
     background: #313163;
     border-radius: 10px;
     text-align: center;
-    font-size: 15px;
+    font-size: 17.5px;
+    color: #fff;
+    padding: .75rem;
 }
 
 .bottom h4 span {
     text-decoration: underline;
+    margin-left: .35rem;
 }
 
 .click {
@@ -202,6 +210,11 @@
         background-color: rgb(255, 255, 255);
         height: max-content;
         border-radius: 20px;
+    }
+
+    .fp_div .body form {
+        max-width: 600px;
+        margin: 0 auto;
     }
 
     .bottom h4 {

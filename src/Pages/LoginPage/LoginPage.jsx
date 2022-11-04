@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../loginpage.css";
 import Group287 from "../../assets/Group287.png";
 import Google from "../../assets/google.png";
@@ -35,7 +36,10 @@ function LoginPage() {
         </div>
 
         <h4>
-          Don't have an account? <span>Sign up here</span>
+          Don't have an account?
+          <Link to="/signup">
+            <span>Sign up here</span>
+          </Link>
         </h4>
       </div>
     </div>

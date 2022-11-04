@@ -1,22 +1,20 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
 import "../loginpage.css";
 import Group287 from "../../assets/Group287.png";
 import Google from "../../assets/google.png";
 import Cross from "../../assets/cross.png";
 import Group6 from "../../assets/Group 6.png";
 function SignupPage() {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+  //controls password requirements
+  const [showRequire, setShow] = useState(true);
 
-  const [showRequire, setShow] = useState(false);
+  //controls character password length
   const [char, setChar] = useState(false);
+
+  //control casing of password
   const [casing, setCase] = useState(false);
+
+  //controls number requirement of password
   const [num, setNum] = useState(false);
 
   const styles = {
@@ -34,33 +32,19 @@ function SignupPage() {
       </div>
 
       <div className="bottom">
-        <form action="" onSubmit={handleSubmit(onSubmit)}>
+        <form action="">
           <div>
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="First Name"
-              {...register("firstName")}
-            />
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="Last Name"
-              {...register("lastName")}
-            />
+            <input type="text" name="" id="" placeholder="First Name" />
+            <input type="text" name="" id="" placeholder="Last Name" />
             <input type="email" placeholder="Email Address" />
-            <input
-              type="password"
-              placeholder="Password"
-              {...register("lastName")}
-            />
+            <input type="password" placeholder="Password" />
 
+            {/* If show require is true, it would list the password requirement */}
             {showRequire && (
               <div className="require">
                 <small style={styles.passwordRequire}>
                   <span>
+                    {/* if the password doesnt contain up to 8 letter, char is false then X is displayed, if char is true green check is shown */}
                     <img
                       className="required"
                       src={(char === false && Cross) || Group6}
@@ -72,6 +56,7 @@ function SignupPage() {
                 </small>
                 <small style={styles.passwordRequire}>
                   <span>
+                    {/* if the password doesnt contain a capital and small letter, casing is false then X is displayed, if char is true green check is shown */}
                     <img
                       className="required"
                       src={(casing === false && Cross) || Group6}
@@ -82,20 +67,21 @@ function SignupPage() {
                 </small>
                 <small style={styles.passwordRequire}>
                   <span>
+                    {/* if the password doesnt contain number, num is false then X is displayed, if char is true green check is shown */}
                     <img
                       className="required"
                       src={(num === false && Cross) || Group6}
                       alt="tick"
                     />
                   </span>
-                  One Number
+                  A Number
                 </small>
               </div>
             )}
 
             <input type="password" placeholder="Confirm Password" />
           </div>
-          <button type="submit" className="click" onClick={handleSubmit}>
+          <button type="submit" className="click">
             LOGIN
           </button>
         </form>
