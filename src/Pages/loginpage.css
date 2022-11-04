@@ -149,7 +149,7 @@
         margin: 0 auto;
         min-width: 450px;
         padding: 2rem;
-        background-color: #fff;
+        background-color: rgb(255, 255, 255);
         height: max-content;
         border-radius: 20px;
     }

@@ -1,10 +1,19 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import "../loginpage.css";
 import Group287 from "../../assets/Group287.png";
 import Google from "../../assets/google.png";
 import Cross from "../../assets/cross.png";
 import Group6 from "../../assets/Group 6.png";
 function SignupPage() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
+
   const [showRequire, setShow] = useState(false);
   const [char, setChar] = useState(false);
   const [casing, setCase] = useState(false);
@@ -15,9 +24,7 @@ function SignupPage() {
       color: char === false ? "red" : "green",
     },
   };
-  const show = () => {
-    setShow(false) ? setShow(true) : setShow(false);
-  };
+  const show = () => (setShow(false) ? setShow(true) : setShow(false));
 
   return (
     <div className="div">
@@ -27,12 +34,28 @@ function SignupPage() {
       </div>
 
       <div className="bottom">
-        <form action="">
+        <form action="" onSubmit={handleSubmit(onSubmit)}>
           <div>
-            <input type="text" name="" id="" placeholder="First Name" />
-            <input type="text" name="" id="" placeholder="Last Name" />
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="First Name"
+              {...register("firstName")}
+            />
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Last Name"
+              {...register("lastName")}
+            />
             <input type="email" placeholder="Email Address" />
-            <input type="password" placeholder="Password" />
+            <input
+              type="password"
+              placeholder="Password"
+              {...register("lastName")}
+            />
 
             {showRequire && (
               <div className="require">
@@ -72,7 +95,7 @@ function SignupPage() {
 
             <input type="password" placeholder="Confirm Password" />
           </div>
-          <button type="submit" className="click">
+          <button type="submit" className="click" onClick={handleSubmit}>
             LOGIN
           </button>
         </form>
