@@ -65,7 +65,7 @@ function Fp() {
             </h3>
             <button className="fp_button">
               <Link
-                to="/signup"
+                to="/login"
                 style={{ color: "#fff", textDecoration: "none" }}
               >
                 Click to go back to Login Page
