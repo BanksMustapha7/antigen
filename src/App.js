@@ -13,7 +13,7 @@ function App() {
             <Route exact path="/" element={<Homepage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
-            <Route path="/forgotten_passsword" element={<Fp />}
+            <Route path="/forgotten_passsword" element={<Fp />} />
           </Routes>
         </Router>
       </header>

@@ -97,6 +97,56 @@
     text-align: center;
 }
 
+.fp_div {
+    display: grid;
+    grid-template-rows: 10vh auto;
+}
+
+.fp_div .top {
+    background-color: #A69BE7;
+    display: flex;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+.fp_div .top img {
+    width: 10px;
+}
+
+.fp_div .top h1 {
+    margin: 0 auto;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.fp_div .body form {
+    display: grid;
+    gap: 3rem;
+    padding: 1rem;
+}
+
+.fp_div .body form h3 {
+    text-align: center;
+    text-align: 400;
+    color: #333333;
+}
+
+.fp_div .body form input {
+    border: 1px solid #828282;
+    border-radius: 10px;
+    padding: .5rem;
+    font-size: 15px;
+    outline: none;
+}
+
+.fp_div .body form button {
+    background: #313163;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
 .bottom h4 span {
     text-decoration: underline;
 }
