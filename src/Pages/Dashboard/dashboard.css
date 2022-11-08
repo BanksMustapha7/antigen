@@ -27,6 +27,10 @@
     place-content: center;
 }
 
+.sidebar>.open {
+    display: none;
+}
+
 .sidebar hr {
     width: 90%;
     background-color: #dfdfdf;
@@ -147,10 +151,21 @@
     }
 
     .sidebar {
+        position: relative;
         position: absolute;
         z-index: 4;
         height: 100vh;
         width: 50%;
+    }
+
+    .sidebar>.open {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 40%;
+        transform: rotate(180deg);
+        padding: .5rem;
+        background-color: #08754bb0;
     }
 
     .sidebar .logo img {

@@ -3,6 +3,7 @@ import "./dashboard.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Group286 from "../../assets/Group 286.png";
 import Chaticon from "../../assets/chaticon.png";
+import Rarr from "../../assets/rarr.png";
 import HomeIcon from "../../assets/homeicon.png";
 import LogoutIcon from "../../assets/logout.png";
 import ProfileIcon from "../../assets/profileicon.png";
@@ -14,10 +15,13 @@ import Clock from "../../assets/clock.png";
 import Notification from "../../assets/notification.png";
 import User from "../../assets/user.png";
 import Home from "./Home/Home";
+
 function Dashboard() {
   return (
     <div className="dashboard">
       <div className="sidebar">
+        <img src={Rarr} alt="" className="open" />
+
         <div className="logo">
           <img src={Group286} alt="logo" />
         </div>
