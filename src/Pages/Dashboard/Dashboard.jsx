@@ -3,7 +3,15 @@ import "./dashboard.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Group286 from "../../assets/Group 286.png";
 import Chaticon from "../../assets/chaticon.png";
-
+import HomeIcon from "../../assets/homeicon.png";
+import LogoutIcon from "../../assets/logout.png";
+import ProfileIcon from "../../assets/profileicon.png";
+import Blogicon from "../../assets/blogicon.png";
+import ScheduleIcon from "../../assets/scheduleicon.png";
+import SettingIcon from "../../assets/settingicon.png";
+import Addicon from "../../assets/add.png";
+import Clock from "../../assets/clock.png";
+import Notification from "../../assets/notification.png";
 function Dashboard() {
   return (
     <div className="dashboard">
@@ -12,17 +20,19 @@ function Dashboard() {
           <img src={Group286} alt="logo" />
         </div>
 
+        <hr />
+
         <ul>
           <li>
-            <img src="" alt="" />
+            <img src={HomeIcon} alt="" />
             <span>Home</span>
           </li>
           <li>
-            <img src="" alt="" />
+            <img src={ScheduleIcon} alt="" />
             <span>Schedule</span>
           </li>
           <li>
-            <img src="" alt="" />
+            <img src={Clock} alt="" />
             <span>Tracker</span>
           </li>
           <li>
@@ -30,23 +40,23 @@ function Dashboard() {
             <span>Chat with Doctor</span>
           </li>
           <li>
-            <img src="" alt="" />
+            <img src={Blogicon} alt="" />
             <span>Blog</span>
           </li>
           <li>
-            <img src="" alt="" />
+            <img src={Addicon} alt="" />
             <span>Add Child</span>
           </li>
           <li>
-            <img src="" alt="" />
+            <img src={ProfileIcon} alt="" />
             <span>My Profile</span>
           </li>
           <li>
-            <img src="" alt="" />
+            <img src={SettingIcon} alt="" />
             <span>Settings</span>
           </li>
           <li>
-            <img src="" alt="" />
+            <img src={LogoutIcon} alt="" />
             <span>Logout</span>
           </li>
         </ul>
@@ -55,7 +65,7 @@ function Dashboard() {
         <div className="topbar">
           <div>
             <button>
-              <img src="" alt="notification" />
+              <img src={Notification} alt="notification" />
             </button>
             <div className="user">
               <h4>John Doe</h4>
