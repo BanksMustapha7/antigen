@@ -12,6 +12,8 @@ import SettingIcon from "../../assets/settingicon.png";
 import Addicon from "../../assets/add.png";
 import Clock from "../../assets/clock.png";
 import Notification from "../../assets/notification.png";
+import User from "../../assets/user.png";
+import Home from "./Home/Home";
 function Dashboard() {
   return (
     <div className="dashboard">
@@ -68,14 +70,18 @@ function Dashboard() {
               <img src={Notification} alt="notification" />
             </button>
             <div className="user">
-              <h4>John Doe</h4>
-              <small>Patients</small>
+              <img src={User} alt="User" />
+              <div className="">
+                <h4>John Doe</h4>
+                <small>Patient</small>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="main">
           Ohaiyo!
+          <Home />
           {/**
      
           <Router>
