@@ -93,6 +93,7 @@
 .body .topbar div>button img {
     width: 13px;
     height: 13px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .body .topbar div .user {
@@ -136,5 +137,49 @@
 @media screen and (max-width: 880px) {
     .sidebar .ul button img {
         display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+
+    .sidebar {
+        position: absolute;
+        z-index: 4;
+        height: 100vh;
+        width: 50%;
+    }
+
+    .body .topbar {
+        padding: 1rem;
+    }
+
+    .body .topbar div .user img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .body .topbar div .user {
+        gap: .5rem;
+    }
+
+    .body .topbar>div {
+        gap: 2rem
+    }
+
+    .body .topbar div .user div {
+        display: grid;
+        gap: none;
+    }
+
+    .body .topbar div .user h4 {
+        font-size: 12px;
+    }
+
+    .body .topbar div .user small {
+        font-size: 10px;
     }
 }
