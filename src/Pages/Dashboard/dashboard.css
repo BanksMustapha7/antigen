@@ -153,6 +153,19 @@
         width: 50%;
     }
 
+    .sidebar .logo img {
+        width: 2.5rem;
+        height: 3rem;
+    }
+
+    .sidebar hr {
+        width: 80%;
+    }
+
+    .sidebar .ul button img {
+        display: block;
+    }
+
     .body .topbar {
         padding: 1rem;
     }
