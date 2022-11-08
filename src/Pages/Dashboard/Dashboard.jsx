@@ -24,44 +24,44 @@ function Dashboard() {
 
         <hr />
 
-        <ul>
-          <li>
+        <div className="ul">
+          <button>
             <img src={HomeIcon} alt="" />
             <span>Home</span>
-          </li>
-          <li>
+          </button>
+          <button>
             <img src={ScheduleIcon} alt="" />
             <span>Schedule</span>
-          </li>
-          <li>
+          </button>
+          <button>
             <img src={Clock} alt="" />
             <span>Tracker</span>
-          </li>
-          <li>
+          </button>
+          <button>
             <img src={Chaticon} alt="" />
             <span>Chat with Doctor</span>
-          </li>
-          <li>
+          </button>
+          <button>
             <img src={Blogicon} alt="" />
             <span>Blog</span>
-          </li>
-          <li>
+          </button>
+          <button>
             <img src={Addicon} alt="" />
             <span>Add Child</span>
-          </li>
-          <li>
+          </button>
+          <button>
             <img src={ProfileIcon} alt="" />
             <span>My Profile</span>
-          </li>
-          <li>
+          </button>
+          <button>
             <img src={SettingIcon} alt="" />
             <span>Settings</span>
-          </li>
-          <li>
+          </button>
+          <button>
             <img src={LogoutIcon} alt="" />
             <span>Logout</span>
-          </li>
-        </ul>
+          </button>
+        </div>
       </div>
       <div className="body">
         <div className="topbar">
