@@ -161,11 +161,10 @@
     .sidebar>.open {
         display: block;
         position: absolute;
-        right: 0;
+        right: -1.5rem;
         top: 40%;
-        transform: rotate(180deg);
         padding: .5rem;
-        background-color: #08754bb0;
+        background-color: #08754b9c;
     }
 
     .sidebar .logo img {

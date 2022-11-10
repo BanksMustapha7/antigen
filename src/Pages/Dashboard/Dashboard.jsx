@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./dashboard.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Group286 from "../../assets/Group 286.png";
@@ -17,10 +17,33 @@ import User from "../../assets/user.png";
 import Home from "./Home/Home";
 
 function Dashboard() {
+  const [close, setClose] = useState(true);
+  const { direction, setDirection } = useState(true);
+
+  const closeMenu = () => {
+    close === true ? setClose(false) : setClose(true);
+    direction === true ? setDirection(false) : setDirection(true);
+  };
+  const styles = {
+    hideMenu: {
+      marginLeft: "-50% ",
+    },
+    changeD: { transform: "rotate(180deg) !important" },
+  };
+
   return (
     <div className="dashboard">
-      <div className="sidebar">
-        <img src={Rarr} alt="" className="open" />
+      <div
+        className="sidebar"
+        style={close ? styles.hideMenu : { background: "#313163" }}
+      >
+        <img
+          src={Rarr}
+          alt=""
+          className="open"
+          onClick={closeMenu}
+          style={direction === true ? styles.changeD : { display: "block" }}
+        />
 
         <div className="logo">
           <img src={Group286} alt="logo" />
