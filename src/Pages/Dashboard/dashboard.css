@@ -52,7 +52,7 @@
     padding: .5rem 1.2rem;
     transition: all ease-in-out .25s;
     background-color: transparent;
-
+    border: none;
 }
 
 .sidebar .ul button:focus,
