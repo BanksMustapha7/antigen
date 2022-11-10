@@ -18,7 +18,7 @@ import Home from "./Home/Home";
 
 function Dashboard() {
   const [close, setClose] = useState(true);
-  const { direction, setDirection } = useState(true);
+  const [direction, setDirection] = useState(true);
 
   const closeMenu = () => {
     close === true ? setClose(false) : setClose(true);
@@ -28,7 +28,7 @@ function Dashboard() {
     hideMenu: {
       marginLeft: "-50% ",
     },
-    changeD: { transform: "rotate(180deg) !important" },
+    changeD: { right: "-1.5rem", transform: "rotate(180deg)" },
   };
 
   return (
@@ -39,7 +39,7 @@ function Dashboard() {
       >
         <img
           src={Rarr}
-          alt=""
+          alt="sidebar"
           className="open"
           onClick={closeMenu}
           style={direction === true ? styles.changeD : { display: "block" }}

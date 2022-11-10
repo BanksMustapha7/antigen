@@ -156,15 +156,17 @@
         z-index: 4;
         height: 100vh;
         width: 50%;
+        transition: ease-in .3s;
     }
 
     .sidebar>.open {
         display: block;
         position: absolute;
-        right: -1.5rem;
+        right: 0;
         top: 40%;
         padding: .5rem;
         background-color: #08754b9c;
+        transition: linear .3s;
     }
 
     .sidebar .logo img {
