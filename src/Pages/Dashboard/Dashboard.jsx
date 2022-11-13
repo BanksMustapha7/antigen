@@ -26,17 +26,14 @@ function Dashboard() {
   };
   const styles = {
     hideMenu: {
-      marginLeft: "-50% ",
+    
     },
     changeD: { right: "-1.5rem", transform: "rotate(180deg)" },
   };
 
   return (
     <div className="dashboard">
-      <div
-        className="sidebar"
-        style={close ? styles.hideMenu : { background: "#313163" }}
-      >
+      <div className={`sidebar + ${close ? "mobileSlide" : ""}`}>
         <img
           src={Rarr}
           alt="sidebar"

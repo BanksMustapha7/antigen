@@ -179,6 +179,10 @@
         height: 3rem;
     }
 
+    .mobileSlide {
+        margin-left: -50% !important;
+    }
+
     .sidebar hr {
         width: 80%;
     }
