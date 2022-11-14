@@ -153,6 +153,7 @@
     .dashboard {
         grid-template-columns: 1fr;
         position: relative;
+        overflow-x: hidden;
     }
 
     .sidebar {

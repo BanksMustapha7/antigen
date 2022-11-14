@@ -71,8 +71,31 @@
     padding: 1rem 1.2rem;
 }
 
+.rBlog>h3 {
+    width: 90%;
+    border-bottom: 1px solid #ccc;
+    padding: .5rem;
+}
+
 .rBlog h3 {
     color: #424242;
     font-family: 'Poppins';
     font-size: 1.2rem;
+}
+
+.rBlog .reads {
+    display: grid;
+    grid-template-columns: 33% auto;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.rBlog .reads small {
+    font-family: "Poppins";
+    color: #313163;
+}
+
+.rBlog img {
+    height: 95px;
+    width: 95px;
 }

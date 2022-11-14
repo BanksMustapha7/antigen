@@ -1,6 +1,8 @@
 import React from "react";
 import "./home.css";
 import Welcome from "../../../assets/welcome.png";
+import Polio from "../../../assets/polio.png";
+import Covid from "../../../assets/covid.png";
 function Home() {
   const time = new Date().getHours();
   let greeting;
@@ -59,7 +61,7 @@ function Home() {
           <h3>Recent Blog</h3>
 
           <div className="reads">
-            <img src="" alt="" />
+            <img src={Covid} alt="" />
             <div className="box">
               <p>3 mins read</p>
               <h3>The improtance of the COVID-19 vaccine</h3>
@@ -67,7 +69,7 @@ function Home() {
             </div>
           </div>
           <div className="reads">
-            <img src="" alt="" />
+            <img src={Polio} alt="" />
             <div className="box">
               <p>5 mins read</p>
               <h3>The polio vaccine for children</h3>
