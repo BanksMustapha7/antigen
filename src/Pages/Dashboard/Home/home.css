@@ -10,6 +10,11 @@
     border-radius: 8px;
 }
 
+.top .box1 {
+    display: grid;
+    gap: 2rem;
+}
+
 .greet {
     display: grid;
     grid-template-columns: 60% auto;
@@ -24,11 +29,13 @@
 .greet h2 {
     font-family: 'Poppins';
     font-weight: 400;
+    color: #424242;
     font-size: 1.2rem;
 }
 
 .greet h2 span {
     font-weight: 600;
+    color: #000;
 }
 
 .greet button {
@@ -37,4 +44,21 @@
     padding: .65rem;
     background-color: #313163;
     width: max-content;
+}
+
+.vaccineCount>h3 {
+    font-family: 'Poppins';
+    color: #424242;
+    margin-bottom: .5rem;
+}
+
+.vaccineCount .boxes {
+    display: grid;
+    gap: .5rem;
+}
+
+.vaccineCount .boxes h3,
+.vaccineCount .boxes h4 {
+    color: #fff;
+    font-family: 'Poppins';
 }
