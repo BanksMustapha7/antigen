@@ -31,8 +31,9 @@ function Dashboard() {
         <img
           src={Rarr}
           alt="sidebar"
-          className={`open + ${direction === true ? "slideBtn" : ""}`}
+          className="open"
           onClick={closeMenu}
+          style={direction === true ? styles.changeD : { display: "block" }}
         />
 
         <div className="logo">

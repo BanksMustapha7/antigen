@@ -183,11 +183,6 @@
         margin-left: -50% !important;
     }
 
-    .slideBtn {
-        right: -1.5rem !important;
-        transform: rotate(180deg);
-    }
-
     .sidebar hr {
         width: 80%;
     }
