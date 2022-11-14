@@ -25,9 +25,6 @@ function Dashboard() {
     direction === true ? setDirection(false) : setDirection(true);
   };
   const styles = {
-    hideMenu: {
-    
-    },
     changeD: { right: "-1.5rem", transform: "rotate(180deg)" },
   };
 
@@ -37,9 +34,8 @@ function Dashboard() {
         <img
           src={Rarr}
           alt="sidebar"
-          className="open"
+          className={`open + ${direction === true ? "slideBtn" : ""}`}
           onClick={closeMenu}
-          style={direction === true ? styles.changeD : { display: "block" }}
         />
 
         <div className="logo">
