@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
 .div {
     display: grid;
     height: 100%;
@@ -9,11 +15,11 @@
 
 .div .top {
     background-image: url(../assets/Group\ 290.png);
-    background-position: center;
+    background-position: 50% 70%;
     background-size: cover;
     display: grid;
     place-content: center;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .div .top img {
@@ -29,8 +35,8 @@
 }
 
 .div .bottom {
-    /* border: 1px dashed red; */
-    padding: 1.2rem;
+    margin-top: 1rem;
+    padding: 1rem 1.2rem;
 }
 
 .div .bottom form,
