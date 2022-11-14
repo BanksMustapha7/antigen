@@ -183,6 +183,11 @@
         margin-left: -50% !important;
     }
 
+    .arrowBtn {
+        right: -1.5rem;
+        transform: rotate(180deg);
+    }
+
     .sidebar hr {
         width: 80%;
     }
