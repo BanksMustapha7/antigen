@@ -24,9 +24,6 @@ function Dashboard() {
     close === true ? setClose(false) : setClose(true);
     direction === true ? setDirection(false) : setDirection(true);
   };
-  const styles = {
-    changeD: { right: "-1.5rem", transform: "rotate(180deg)" },
-  };
 
   return (
     <div className="dashboard">
