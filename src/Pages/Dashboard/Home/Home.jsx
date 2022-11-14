@@ -55,7 +55,26 @@ function Home() {
           </div>
         </div>
 
-        <div className="box 2"></div>
+        <div className="card rBlog">
+          <h3>Recent Blog</h3>
+
+          <div className="reads">
+            <img src="" alt="" />
+            <div className="box">
+              <p>3 mins read</p>
+              <h3>The improtance of the COVID-19 vaccine</h3>
+              <small>Read Blog -></small>
+            </div>
+          </div>
+          <div className="reads">
+            <img src="" alt="" />
+            <div className="box">
+              <p>5 mins read</p>
+              <h3>The polio vaccine for children</h3>
+              <small>Read blog -></small>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
