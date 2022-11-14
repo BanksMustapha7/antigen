@@ -135,6 +135,10 @@
     font-weight: 400;
 }
 
+.fp_div .body {
+    background-color: transparent;
+}
+
 .fp_div .body form {
     display: grid;
     gap: 3rem;
