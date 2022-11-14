@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+.home {
+    display: grid;
+}
+
+.card {
+    padding: .85rem;
+    box-shadow: 2px 8px 20px rgba(181, 181, 181, 0.2);
+    border-radius: 8px;
+}
+
+.greet {
+    display: grid;
+    grid-template-columns: 60% auto;
+}
+
+.greet div {
+    display: grid;
+    gap: 1rem;
+    font-family: 'Poppins';
+}
+
+.greet h2 {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.greet h2 span {
+    font-weight: 600;
+}
+
+.greet button {
+    color: #fff;
+    border-radius: 10px;
+    padding: .65rem;
+    background-color: #313163;
+    width: max-content;
+}

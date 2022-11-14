@@ -101,7 +101,6 @@ function Dashboard() {
         </div>
 
         <div className="main">
-          Ohaiyo!
           <Home />
           {/**
      

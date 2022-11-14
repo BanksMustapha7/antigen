@@ -225,4 +225,8 @@
     .body .topbar div .user small {
         font-size: 10px;
     }
+
+    .main {
+        padding: 1.5rem 1rem;
+    }
 }
