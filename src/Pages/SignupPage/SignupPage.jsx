@@ -6,23 +6,40 @@ import Cross from "../../assets/cross.png";
 import Group6 from "../../assets/Group 6.png";
 function SignupPage() {
   //controls password requirements
-  const [showRequire, setShow] = useState(true);
+  const [showRequirements, setShowRequirements] = useState(true);
 
-  //controls character password length
-  const [char, setChar] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  //control casing of password
-  const [casing, setCase] = useState(false);
+  const [minChars, setMinChars] = useState(false);
+  const [caseCheck, setCaseCheck] = useState(false);
+  const [numCheck, setNumCheck] = useState(false);
 
-  //controls number requirement of password
-  const [num, setNum] = useState(false);
+  const checkPwd = (currentPassword) => {
+    console.log(currentPassword, "currentpassword");
+    if (/[A-Z]/.test(currentPassword) && /[a-z]/.test(currentPassword)) {
+      setCaseCheck(true);
+    } else setCaseCheck(false);
 
-  const styles = {
-    passwordRequire: {
-      color: char === false ? "red" : "green",
-    },
+    // Check for number of Characters
+    if (Number(String(currentPassword).length) >= 8) {
+      setMinChars(true);
+    } else setMinChars(false);
+
+    if (/\d/.test(currentPassword)) {
+      setNumCheck(true);
+    } else {
+      setNumCheck(false);
+    }
+
+    if (caseCheck && minChars && numCheck) {
+      setShowRequirements(false);
+    } else setShowRequirements(true);
   };
-  const show = () => (setShow(false) ? setShow(true) : setShow(false));
+
+  // const show = () => (setShow(false) ? setShow(true) : setShow(false));
 
   return (
     <div className="div">
@@ -34,43 +51,68 @@ function SignupPage() {
       <div className="bottom">
         <form action="">
           <div>
-            <input type="text" name="" id="" placeholder="First Name" />
-            <input type="text" name="" id="" placeholder="Last Name" />
-            <input type="email" placeholder="Email Address" />
-            <input type="password" placeholder="Password" />
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="First Name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Last Name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
+            <input
+              type="email"
+              placeholder="Email Address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              onKeyUp={(e) => checkPwd(e.target.value)}
+            />
 
             {/* If show require is true, it would list the password requirement */}
-            {showRequire && (
+            {showRequirements && (
               <div className="require">
-                <small style={styles.passwordRequire}>
+                <small style={{ color: !minChars ? "red" : "green" }}>
                   <span>
                     {/* if the password doesnt contain up to 8 letter, char is false then X is displayed, if char is true green check is shown */}
                     <img
                       className="required"
-                      src={(char === false && Cross) || Group6}
+                      src={(!minChars && Cross) || Group6}
                       alt="tick"
                       srcset=""
                     />
                   </span>
                   8 Characters Minimum
                 </small>
-                <small style={styles.passwordRequire}>
+                <small style={{ color: !caseCheck ? "red" : "green" }}>
                   <span>
                     {/* if the password doesnt contain a capital and small letter, casing is false then X is displayed, if char is true green check is shown */}
                     <img
                       className="required"
-                      src={(casing === false && Cross) || Group6}
+                      src={(!caseCheck && Cross) || Group6}
                       alt="tick"
                     />
                   </span>
                   One Uppercase and One Lowercase
                 </small>
-                <small style={styles.passwordRequire}>
+                <small style={{ color: !numCheck ? "red" : "green" }}>
                   <span>
                     {/* if the password doesnt contain number, num is false then X is displayed, if char is true green check is shown */}
                     <img
                       className="required"
-                      src={(num === false && Cross) || Group6}
+                      src={(!numCheck && Cross) || Group6}
                       alt="tick"
                     />
                   </span>
