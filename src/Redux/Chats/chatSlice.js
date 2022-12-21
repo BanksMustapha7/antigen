@@ -6,8 +6,8 @@ const chatSlice = createSlice({
 
     reducers: {
         setChats: (state, action) => {
-            const {notes} = action.payload;
-            state = notes;
+            const {chats} = action.payload;
+            state = chats;
         } 
     }
 })

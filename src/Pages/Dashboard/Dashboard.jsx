@@ -138,3 +138,12 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
+
+/*
+Note
+
+Here You have all the details you need already. The Firsname, last name, email, profile picture
+- For the section where you have to display the vaccinations, the successful and pending ones, I will suggest you do a client side sorting to differentiate which is successful and which is pending.
+There is a vaccination status key that is returned from the api so you can use that to sort.
+*/

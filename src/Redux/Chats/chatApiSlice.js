@@ -1,12 +1,19 @@
 import { apiSlice } from "../../app/api/apiSlice";
 
-export const noteApiSlice = apiSlice.injectEndpoints({
-    endpoints: builder => ({
-      getchats: builder.query({
-        query: (userEmail) => `/api/chatRoute/${userEmail}`,
-        keepUnusedDataFor: 5,
+export const chatApiSlice = apiSlice.injectEndpoints({
+  endpoints: (builder) => ({
+    getchats: builder.query({
+      query: (userId) => `/api/chatRoutes/`,
+      keepUnusedDataFor: 5,
+    }),
+    createChat: builder.mutation({
+      query: (credentials) => ({
+        url: `/api/chat/chatRoutes`,
+        method: "POST",
+        body: { ...credentials },
       }),
-    })
-})
+    }),
+  }),
+});
 
-export const { useGetchatsQuery } = noteApiSlice;
+export const { useGetchatsQuery, useCreateChatMutation } = chatApiSlice;
