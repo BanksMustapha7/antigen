@@ -15,6 +15,9 @@ import Notification from "../../assets/notification.png";
 import User from "../../assets/user.png";
 import Home from "./Home/Home";
 import { useSelector } from "react-redux";
+import {  setCurrentUserEmail, setFirstName, setLastName, setProfilePic, setUserId } from "../../Redux/Auth/authSlice";
+import { useGetvaccinationsQuery } from "../../Redux/Vaccinations/vaccinationApiSlice";
+import { useSelector } from "react-redux";
 import {
   setCurrentUserEmail,
   setFirstName,

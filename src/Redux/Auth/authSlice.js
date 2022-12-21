@@ -47,5 +47,9 @@ export const { setCredentials, logOut } = authSlice.actions;
 
 export default authSlice.reducer;
 
-export const setCurrentUser = (state) => state.auth.user;
+export const setCurrentUserEmail = (state) => state.auth.email;
+export const setFirstName = (state) => state.auth.firstName;
+export const setLastName = (state) => state.auth.lastName;
+export const setProfilePic = (state) => state.auth.profilePic;
+export const setUserId = (state)=> state.auth._id;
 export const setCurrentToken = (state) => state.auth.token;
