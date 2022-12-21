@@ -15,10 +15,30 @@ import Clock from "../../assets/clock.png";
 import Notification from "../../assets/notification.png";
 import User from "../../assets/user.png";
 import Home from "./Home/Home";
+import { useSelector } from "react-redux";
+import {  setCurrentUserEmail, setFirstName, setLastName, setProfilePic, setUserId } from "../../Redux/Auth/authSlice";
+import { useGetvaccinationsQuery } from "../../Redux/Vaccinations/vaccinationApiSlice";
 
 function Dashboard() {
   const [close, setClose] = useState(true);
   const [direction, setDirection] = useState(true);
+
+
+  const email = useSelector(setCurrentUserEmail);
+  const firstName = useSelector(setFirstName);
+  const lastName = useSelector(setLastName);
+  const profilePic = useSelector(setProfilePic);
+  const userId = useSelector(setUserId);
+
+  // console.log(user);
+
+  const { data: vaccinationSchedules, isLoading, isError } = useGetvaccinationsQuery(userId);
+  console.log(vaccinationSchedules);
+  console.log("email", email)
+  console.log("First Name:", firstName);
+  console.log("Last Name:", lastName);
+  console.log("Profile Picture:", profilePic);
+  console.log("UserId:", userId);
 
   const closeMenu = () => {
     close === true ? setClose(false) : setClose(true);
