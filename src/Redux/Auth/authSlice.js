@@ -21,7 +21,7 @@ const authSlice = createSlice({
         lastName,
         profilePic,
         roles,
-        token,
+        accessToken,
       } = action.payload;
       state._id = _id;
       state.email = email;
@@ -29,7 +29,7 @@ const authSlice = createSlice({
       state.lastName = lastName;
       state.profilePic = profilePic;
       state.roles = roles;
-      state.token = token;
+      state.token = accessToken;
     },
     logOut: (state, action) => {
       state._id = null;
