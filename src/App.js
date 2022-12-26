@@ -20,11 +20,13 @@ function App() {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/signup" element={<SignupPage />} />
               <Route path="/forgot_password" element={<Fp />} />
+              <Route path="/Dashboard" element={<Dashboard />} />
 
               {/* Protected Route  */}
               <Route element={<RequireAuth />}>
                 <Route path="/Dashboard" element={<Dashboard />} />
               </Route>
+              
             </Route>
           </Routes>
         </Router>

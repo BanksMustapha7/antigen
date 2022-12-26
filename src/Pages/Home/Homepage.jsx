@@ -16,7 +16,7 @@ function Homepage() {
           <Link to="/forgot_password">Forgot Password</Link>
         </li>
         <li>
-          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/dashboard">To Dashboard</Link>
         </li>
       </ul>
     </div>
