@@ -9,8 +9,9 @@ import Group6 from "../../assets/Group 6.png";
 
 function SignupPage() {
   //controls password requirements
-  const [showRequirements, setShowRequirements] = useState(true);
+  const [showRequire, setShow] = useState(true);
 
+<<<<<<< HEAD
   const [firstName, setFirstName] = useState("");
   const firstNameRef = useRef();
   const [lastName, setLastName] = useState("");
@@ -23,31 +24,30 @@ function SignupPage() {
   const [ConfirmPassword, setConfirmedPassword] = useState(false);
   const [Error, setError] = useState("");
   const errorRef = useRef();
+=======
+  //controls character password length
+  const [char, setChar] = useState(false);
+>>>>>>> parent of 3815ed8 (Initialized Redux)
 
-  const [minChars, setMinChars] = useState(false);
-  const [caseCheck, setCaseCheck] = useState(false);
-  const [numCheck, setNumCheck] = useState(false);
+  //control casing of password
+  const [casing, setCase] = useState(false);
 
+<<<<<<< HEAD
   const checkPwd = (currentPassword) => {
     if (/[A-Z]/.test(currentPassword) && /[a-z]/.test(currentPassword)) {
       setCaseCheck(true);
     } else setCaseCheck(false);
+=======
+  //controls number requirement of password
+  const [num, setNum] = useState(false);
+>>>>>>> parent of 3815ed8 (Initialized Redux)
 
-    // Check for number of Characters
-    if (Number(String(currentPassword).length) >= 8) {
-      setMinChars(true);
-    } else setMinChars(false);
-
-    if (/\d/.test(currentPassword)) {
-      setNumCheck(true);
-    } else {
-      setNumCheck(false);
-    }
-
-    if (caseCheck && minChars && numCheck) {
-      setShowRequirements(false);
-    } else setShowRequirements(true);
+  const styles = {
+    passwordRequire: {
+      color: char === false ? "red" : "green",
+    },
   };
+<<<<<<< HEAD
 
   const checkConfirmPassword = () => {
     if (pwd2 === password) {
@@ -108,6 +108,9 @@ function SignupPage() {
       // errorRef.current.focus();
     }
   };
+=======
+  const show = () => (setShow(false) ? setShow(true) : setShow(false));
+>>>>>>> parent of 3815ed8 (Initialized Redux)
 
   return (
     <div className="div">
@@ -119,6 +122,7 @@ function SignupPage() {
       <div className="bottom">
         <form action="">
           <div>
+<<<<<<< HEAD
             <input
               type="text"
               name=""
@@ -152,39 +156,45 @@ function SignupPage() {
               onKeyUp={(e) => checkPwd(e.target.value)}
               ref={passwordRef}
             />
+=======
+            <input type="text" name="" id="" placeholder="First Name" />
+            <input type="text" name="" id="" placeholder="Last Name" />
+            <input type="email" placeholder="Email Address" />
+            <input type="password" placeholder="Password" />
+>>>>>>> parent of 3815ed8 (Initialized Redux)
 
             {/* If show require is true, it would list the password requirement */}
-            {showRequirements && (
+            {showRequire && (
               <div className="require">
-                <small style={{ color: !minChars ? "red" : "green" }}>
+                <small style={styles.passwordRequire}>
                   <span>
                     {/* if the password doesnt contain up to 8 letter, char is false then X is displayed, if char is true green check is shown */}
                     <img
                       className="required"
-                      src={(!minChars && Cross) || Group6}
+                      src={(char === false && Cross) || Group6}
                       alt="tick"
                       srcSet=""
                     />
                   </span>
                   8 Characters Minimum
                 </small>
-                <small style={{ color: !caseCheck ? "red" : "green" }}>
+                <small style={styles.passwordRequire}>
                   <span>
                     {/* if the password doesnt contain a capital and small letter, casing is false then X is displayed, if char is true green check is shown */}
                     <img
                       className="required"
-                      src={(!caseCheck && Cross) || Group6}
+                      src={(casing === false && Cross) || Group6}
                       alt="tick"
                     />
                   </span>
                   One Uppercase and One Lowercase
                 </small>
-                <small style={{ color: !numCheck ? "red" : "green" }}>
+                <small style={styles.passwordRequire}>
                   <span>
                     {/* if the password doesnt contain number, num is false then X is displayed, if char is true green check is shown */}
                     <img
                       className="required"
-                      src={(!numCheck && Cross) || Group6}
+                      src={(num === false && Cross) || Group6}
                       alt="tick"
                     />
                   </span>
