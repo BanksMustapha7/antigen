@@ -65,7 +65,7 @@ function Home() {
             <div className="box">
               <p>3 mins read</p>
               <h3>The improtance of the COVID-19 vaccine</h3>
-              <small>Read Blog -></small>
+              <small>Read Blog -&gt;</small>
             </div>
           </div>
           <div className="reads">
@@ -73,7 +73,7 @@ function Home() {
             <div className="box">
               <p>5 mins read</p>
               <h3>The polio vaccine for children</h3>
-              <small>Read blog -></small>
+              <small>Read blog -&gt;</small>
             </div>
           </div>
         </div>

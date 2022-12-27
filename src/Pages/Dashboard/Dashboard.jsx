@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./dashboard.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Group286 from "../../assets/Group 286.png";
 import Chaticon from "../../assets/chaticon.png";
 import Rarr from "../../assets/rarr.png";
@@ -15,10 +14,39 @@ import Clock from "../../assets/clock.png";
 import Notification from "../../assets/notification.png";
 import User from "../../assets/user.png";
 import Home from "./Home/Home";
+import { useSelector } from "react-redux";
+import {
+  setCurrentUserEmail,
+  setFirstName,
+  setLastName,
+  setProfilePic,
+  setUserId,
+} from "../../Redux/Auth/authSlice";
+import { useGetvaccinationsQuery } from "../../Redux/Vaccinations/vaccinationApiSlice";
 
 function Dashboard() {
   const [close, setClose] = useState(true);
   const [direction, setDirection] = useState(true);
+
+  const email = useSelector(setCurrentUserEmail);
+  const firstName = useSelector(setFirstName);
+  const lastName = useSelector(setLastName);
+  const profilePic = useSelector(setProfilePic);
+  const userId = useSelector(setUserId);
+
+  // console.log(user);
+
+  const {
+    data: vaccinationSchedules,
+    isLoading,
+    isError,
+  } = useGetvaccinationsQuery(userId);
+  console.log(vaccinationSchedules);
+  console.log("email", email);
+  console.log("First Name:", firstName);
+  console.log("Last Name:", lastName);
+  console.log("Profile Picture:", profilePic);
+  console.log("UserId:", userId);
 
   const closeMenu = () => {
     close === true ? setClose(false) : setClose(true);
@@ -47,8 +75,10 @@ function Dashboard() {
 
         <div className="ul">
           <button>
-            <img src={HomeIcon} alt="" />
-            <span>Home</span>
+            <Link to="blog">
+              <img src={HomeIcon} alt="" />
+              <span>Home</span>
+            </Link>
           </button>
           <button>
             <img src={ScheduleIcon} alt="" />
@@ -82,6 +112,8 @@ function Dashboard() {
             <img src={LogoutIcon} alt="" />
             <span>Logout</span>
           </button>
+
+          <Outlet />
         </div>
       </div>
       <div className="body">
@@ -102,15 +134,6 @@ function Dashboard() {
 
         <div className="main">
           <Home />
-          {/**
-     
-          <Router>
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route path="/login" element={<Chat />} />
-              <Route path="/signup" element={<Schedule />} />
-            </Routes>
-          </Router>*/}
         </div>
       </div>
     </div>
@@ -118,3 +141,11 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
+/*
+Note
+
+Here You have all the details you need already. The Firsname, last name, email, profile picture
+- For the section where you have to display the vaccinations, the successful and pending ones, I will suggest you do a client side sorting to differentiate which is successful and which is pending.
+There is a vaccination status key that is returned from the api so you can use that to sort.
+*/
