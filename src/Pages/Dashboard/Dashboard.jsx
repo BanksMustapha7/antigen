@@ -75,10 +75,8 @@ function Dashboard() {
 
         <div className="ul">
           <button>
-            <Link to="blog">
-              <img src={HomeIcon} alt="" />
-              <span>Home</span>
-            </Link>
+            <img src={HomeIcon} alt="" />
+            <span>Home</span>
           </button>
           <button>
             <img src={ScheduleIcon} alt="" />
@@ -113,7 +111,6 @@ function Dashboard() {
             <span>Logout</span>
           </button>
 
-          <Outlet />
         </div>
       </div>
       <div className="body">

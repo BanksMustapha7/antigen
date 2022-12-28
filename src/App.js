@@ -8,7 +8,7 @@ import Homepage from "./Pages/Home/Homepage";
 import Fp from "./Pages/ForgotPassword/Fp";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Home from "./Pages/Dashboard/Home/Home";
-import Blog from "./Pages/Dashboard/Blog/Blog";
+
 function App() {
   return (
     <div className="App">
@@ -22,11 +22,7 @@ function App() {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/signup" element={<SignupPage />} />
               <Route path="/forgot_password" element={<Fp />} />
-              <Route path="/Dashboard" element={<Dashboard />}>
-                <Route index element={<Home />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/blog" element={<Blog />} />
-              </Route>
+              <Route path="/Dashboard" element={<Dashboard />}></Route>
 
               {/* Protected Route  */}
               <Route element={<RequireAuth />}>
