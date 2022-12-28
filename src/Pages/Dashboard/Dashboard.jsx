@@ -108,6 +108,7 @@ function Dashboard() {
             <img src={LogoutIcon} alt="" />
             <span>Logout</span>
           </button>
+
         </div>
       </div>
       <div className="body">

@@ -9,16 +9,16 @@
 .dashboard {
     display: grid;
     grid-template-columns: 16.5% auto;
-    height: 100vh;
+    max-height: 100vh;
 }
 
 .sidebar {
+    height: 100vh;
     padding: 2rem 0;
     background: #313163;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .sidebar .logo {
@@ -73,6 +73,9 @@
 
 .body {
     background: #E5E5E5;
+    display: grid;
+    grid-template-rows: 9vh 90vh;
+    border: 1px solid red;
 }
 
 .body .topbar {
@@ -131,6 +134,7 @@
 
 .main {
     padding: 2rem;
+    overflow-x: auto;
 }
 
 @media screen and (min-width: 1367px) {

@@ -11,11 +11,33 @@ function App() {
       <header className="App-header">
         <Router>
           <Routes>
-            <Route exact path="/" element={<Homepage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/signup" element={<SignupPage />} />
-            <Route path="/forgot_password" element={<Fp />} />
-            <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/" element={<Layout />}>
+              {/* Public Routes */}
+
+              <Route index element={<Homepage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/signup" element={<SignupPage />} />
+              <Route path="/forgot_password" element={<Fp />} />
+              <Route path="/Dashboard" element={<Dashboard />}></Route>
+
+              {/* Protected Route  */}
+              <Route element={<RequireAuth />}>
+                <Route path="/Dashboard" element={<Dashboard />} />
+              </Route>
+            </Route>
+            <Route path="/" element={<Layout />}>
+              {/* Public Routes */}
+
+              <Route index element={<Homepage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/signup" element={<SignupPage />} />
+              <Route path="/forgot_password" element={<Fp />} />
+
+              {/* Protected Route  */}
+              <Route element={<RequireAuth />}>
+                <Route path="/Dashboard" element={<Dashboard />} />
+              </Route>
+            </Route>
           </Routes>
         </Router>
       </header>
