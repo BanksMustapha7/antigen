@@ -75,7 +75,6 @@
     background: #E5E5E5;
     display: grid;
     grid-template-rows: 9vh 90vh;
-    border: 1px solid red;
 }
 
 .body .topbar {

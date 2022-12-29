@@ -1,0 +1,106 @@
+.details {
+    display: grid;
+    gap: 2rem
+}
+
+.image {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.profile .image img {
+    width: 140px;
+    height: 140px;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+}
+
+.file_input {
+    border: 1px solid red;
+    visibility: hidden;
+}
+
+.file_input::before {
+    visibility: visible;
+    content: 'Upload Image';
+    display: inline-block;
+    background: #313163;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    padding: .65rem .85rem;
+    width: max-content;
+    white-space: nowrap;
+    outline: none;
+    cursor: pointer;
+}
+
+.button {
+    width: max-content;
+    background: #313163;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    padding: .65rem .85rem;
+}
+
+.form {
+    display: grid;
+    gap: 1.35rem;
+}
+
+.form .rows {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.form .rows div {
+    display: grid;
+
+    gap: .5rem;
+}
+
+.form .rows div input,
+.form .rows div label,
+.form .rows select {
+    font-size: 16px;
+    width: 80%;
+}
+
+.form .rows div input,
+.form .rows div select {
+    border: 1px solid #888;
+    padding: .5rem .8rem;
+}
+
+.form button {
+    margin-top: 1rem;
+}
+
+@media screen and (max-width:600px) {
+    .image {
+        display: grid;
+        place-items: center;
+    }
+
+    .file_input {
+        margin-left: 7.5rem;
+    }
+
+    .profile .image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .form .rows {
+        grid-template-columns: 1fr;
+    }
+
+    .form .rows div input,
+    .form .rows div label,
+    .form .rows select {
+        font-size: 16px;
+        width: 100%;
+    }
+}

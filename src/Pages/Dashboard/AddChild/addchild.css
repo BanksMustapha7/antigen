@@ -1,0 +1,19 @@
+.profile {
+    margin: 1rem 0;
+    background: #fff;
+    height: max-content;
+    padding: 8rem;
+    box-shadow: 2px 8px 20px rgba(181, 181, 181, 0.2);
+    border-radius: 8px;
+    display: grid;
+    gap: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+    .profile {
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 2rem 1rem;
+    }
+}

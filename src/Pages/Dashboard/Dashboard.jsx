@@ -14,6 +14,9 @@ import Clock from "../../assets/clock.png";
 import Notification from "../../assets/notification.png";
 import User from "../../assets/user.png";
 import Home from "./Home/Home";
+import Blog from "../Blog/Blog";
+import Profile from "./Profile/Profile";
+import Addchild from "./AddChild/Addchild";
 import { useSelector } from "react-redux";
 import {
   setCurrentUserEmail,
@@ -110,7 +113,6 @@ function Dashboard() {
             <img src={LogoutIcon} alt="" />
             <span>Logout</span>
           </button>
-
         </div>
       </div>
       <div className="body">
@@ -130,7 +132,11 @@ function Dashboard() {
         </div>
 
         <div className="main">
-          <Home />
+          {/**  <Home /> */}
+
+          <Profile />
+          <Addchild />
+          <Blog />
         </div>
       </div>
     </div>

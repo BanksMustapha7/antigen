@@ -7,7 +7,6 @@ import SignupPage from "./Pages/SignupPage/SignupPage";
 import Homepage from "./Pages/Home/Homepage";
 import Fp from "./Pages/ForgotPassword/Fp";
 import Dashboard from "./Pages/Dashboard/Dashboard";
-import Home from "./Pages/Dashboard/Home/Home";
 
 function App() {
   return (

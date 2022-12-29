@@ -14,7 +14,7 @@ function Home() {
     greeting = "Good evening";
   }
 
-  const user = "John";
+  const user = "Joshua Jide";
   return (
     <div className="home">
       <div className="top">
@@ -26,7 +26,9 @@ function Home() {
                   {greeting}, <span>{user}</span>
                 </h2>
                 <p>Welcome to Antigen!</p>
-                <button>Chat with a doctor</button>
+                <button style={{ cursor: "pointer" }}>
+                  Chat with a doctor
+                </button>
               </div>
               <img src={Welcome} alt="welcome" srcset="" />
             </div>
