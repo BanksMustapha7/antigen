@@ -71,7 +71,9 @@
 .form .rows div input,
 .form .rows div select {
     border: 1px solid #888;
-    padding: .5rem .8rem;
+    padding: .65rem .8rem;
+    border: 2px solid #B5B5B5;
+    border-radius: 4px;
 }
 
 .form button {

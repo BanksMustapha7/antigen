@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 .profile {
     margin: 1rem 0;
     background: #fff;
@@ -7,6 +13,10 @@
     border-radius: 8px;
     display: grid;
     gap: 3rem;
+}
+
+.profile>h1 {
+    font-family: 'Poppins', sans-serif;
 }
 
 @media screen and (max-width: 600px) {
