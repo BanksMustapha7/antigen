@@ -13,10 +13,7 @@ import Addicon from "../../assets/add.png";
 import Clock from "../../assets/clock.png";
 import Notification from "../../assets/notification.png";
 import User from "../../assets/user.png";
-import Home from "./Home/Home";
-import Blog from "../Blog/Blog";
-import Profile from "./Profile/Profile";
-import Addchild from "./AddChild/Addchild";
+import { Link, Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 import {
   setCurrentUserEmail,
@@ -77,10 +74,13 @@ function Dashboard() {
         <hr />
 
         <div className="ul">
-          <button>
-            <img src={HomeIcon} alt="" />
-            <span>Home</span>
-          </button>
+          <Link to="home">
+            <button>
+              <img src={HomeIcon} alt="" />
+              <span>Home</span>
+            </button>
+          </Link>
+
           <button>
             <img src={ScheduleIcon} alt="" />
             <span>Schedule</span>
@@ -97,14 +97,21 @@ function Dashboard() {
             <img src={Blogicon} alt="" />
             <span>Blog</span>
           </button>
-          <button>
-            <img src={Addicon} alt="" />
-            <span>Add Child</span>
-          </button>
-          <button>
-            <img src={ProfileIcon} alt="" />
-            <span>My Profile</span>
-          </button>
+
+          <Link to="addchild">
+            <button>
+              <img src={Addicon} alt="" />
+              <span>Add Child</span>
+            </button>
+          </Link>
+
+          <Link to="profile">
+            <button>
+              <img src={ProfileIcon} alt="" />
+              <span>My Profile</span>
+            </button>
+          </Link>
+
           <button>
             <img src={SettingIcon} alt="" />
             <span>Settings</span>
@@ -132,11 +139,7 @@ function Dashboard() {
         </div>
 
         <div className="main">
-          {/**  <Home /> */}
-
-          <Profile />
-          <Addchild />
-          <Blog />
+          <Outlet />
         </div>
       </div>
     </div>
