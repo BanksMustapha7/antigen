@@ -52,6 +52,9 @@ function Dashboard() {
     close === true ? setClose(false) : setClose(true);
     direction === true ? setDirection(false) : setDirection(true);
   };
+  const mobileDir = () => {
+    close === true ? setClose(false) : setClose(true);
+  };
   const styles = {
     changeD: { right: "-1.5rem", transform: "rotate(180deg)" },
   };
@@ -74,7 +77,7 @@ function Dashboard() {
         <hr />
 
         <div className="ul">
-          <Link to="home" className="link" onClick={closeMenu}>
+          <Link to="home" className="link" onClick={mobileDir}>
             <img src={HomeIcon} alt="" />
             <span>Home</span>
           </Link>
@@ -96,12 +99,12 @@ function Dashboard() {
             <span>Blog</span>
           </Link>
 
-          <Link to="addchild" className="link">
+          <Link to="addchild" className="link" onClick={mobileDir}>
             <img src={Addicon} alt="" />
             <span>Add Child</span>
           </Link>
 
-          <Link to="profile" className="link" onClick={closeMenu}>
+          <Link to="profile" className="link" onClick={mobileDir}>
             <img src={ProfileIcon} alt="" />
             <span>My Profile</span>
           </Link>
@@ -110,7 +113,7 @@ function Dashboard() {
             <img src={SettingIcon} alt="" />
             <span>Settings</span>
           </Link>
-          <Link className="link">
+          <Link className="link" to="/login">
             <img src={LogoutIcon} alt="" />
             <span>Logout</span>
           </Link>

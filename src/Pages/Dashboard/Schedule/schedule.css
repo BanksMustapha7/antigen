@@ -1,0 +1,77 @@
+.schedule {
+    display: grid;
+    gap: 2.5rem;
+    padding: 2rem;
+}
+
+.schedule .tabs {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.schedule .tabs button {
+    color: #828282;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.activeTab {
+    color: #313163 !important;
+    border-bottom: 5px solid #313163;
+}
+
+.hospital {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 2px 8px 20px rgba(181, 181, 181, 0.2);
+    border-radius: 8px;
+    padding: 1.75rem 1.5rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.hospital .box {
+    display: grid;
+    gap: .5rem;
+}
+
+.hospital .box small {
+    color: #828282;
+}
+
+.hospital input {
+    color: #828282;
+    width: 24%;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+.vacType {
+    justify-content: space-between;
+    box-shadow: unset;
+}
+
+.vaccinesType {
+    background-color: #fff;
+    box-shadow: 2px 8px 20px rgba(181, 181, 181, 0.2);
+    border-radius: 8px;
+}
+
+.vaccines {
+    display: grid;
+}
+
+.vaccines button {
+    background-color: transparent;
+    border-bottom: 1px solid #D6D9DF;
+    padding: .65rem;
+    cursor: pointer;
+}
+
+.vaccines button:hover {
+    background: #A69BE7;
+}
