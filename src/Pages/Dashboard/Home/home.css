@@ -2,6 +2,7 @@
 
 .home {
     display: grid;
+    padding: 1.2rem 1rem;
 }
 
 .card {
