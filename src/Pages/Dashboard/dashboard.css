@@ -43,7 +43,7 @@
     width: 100%;
 }
 
-.sidebar .ul button {
+.sidebar .ul .link {
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -55,17 +55,17 @@
     border: none;
 }
 
-.sidebar .ul button:focus,
-.sidebar .ul button:hover {
+.sidebar .ul .link:focus,
+.sidebar .ul .link:hover {
     background-color: #A69BE7;
 }
 
-.sidebar .ul button img {
+.sidebar .ul .link img {
     width: 15px;
     height: 15px;
 }
 
-.sidebar .ul button span {
+.sidebar .ul .link span {
     color: #fff;
     text-align: left;
     font-family: 'Poppins', sans-serif;
@@ -201,7 +201,7 @@
     }
 
     .body .topbar {
-        padding: .5rem 1rem;
+        padding: 0 1.5rem;
     }
 
     .body .topbar div .user img {
