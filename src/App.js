@@ -10,7 +10,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import Home from "./Pages/Dashboard/Home/Home";
 import Profile from "./Pages/Dashboard/Profile/Profile";
 import Addchild from "./Pages/Dashboard/AddChild/Addchild";
-
+import Schedule from "./Pages/Dashboard/Schedule/Schedule";
 function App() {
   return (
     <div className="App">
@@ -28,6 +28,7 @@ function App() {
                 <Route path="home" index element={<Home />} />
                 <Route path="profile" element={<Profile />} />
                 <Route path="addchild" element={<Addchild />} />
+                <Route path="schedule" element={<Schedule />} />
               </Route>
 
               {/* Protected Route  */}

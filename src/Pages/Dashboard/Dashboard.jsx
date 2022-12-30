@@ -74,52 +74,46 @@ function Dashboard() {
         <hr />
 
         <div className="ul">
-          <Link to="home">
-            <button>
-              <img src={HomeIcon} alt="" />
-              <span>Home</span>
-            </button>
+          <Link to="home" className="link" onClick={closeMenu}>
+            <img src={HomeIcon} alt="" />
+            <span>Home</span>
           </Link>
 
-          <button>
+          <Link className="link" to="schedule">
             <img src={ScheduleIcon} alt="" />
             <span>Schedule</span>
-          </button>
-          <button>
+          </Link>
+          <Link className="link">
             <img src={Clock} alt="" />
             <span>Tracker</span>
-          </button>
-          <button>
+          </Link>
+          <Link className="link">
             <img src={Chaticon} alt="" />
             <span>Chat with Doctor</span>
-          </button>
-          <button>
+          </Link>
+          <Link className="link">
             <img src={Blogicon} alt="" />
             <span>Blog</span>
-          </button>
-
-          <Link to="addchild">
-            <button>
-              <img src={Addicon} alt="" />
-              <span>Add Child</span>
-            </button>
           </Link>
 
-          <Link to="profile">
-            <button>
-              <img src={ProfileIcon} alt="" />
-              <span>My Profile</span>
-            </button>
+          <Link to="addchild" className="link">
+            <img src={Addicon} alt="" />
+            <span>Add Child</span>
           </Link>
 
-          <button>
+          <Link to="profile" className="link" onClick={closeMenu}>
+            <img src={ProfileIcon} alt="" />
+            <span>My Profile</span>
+          </Link>
+
+          <Link className="link">
             <img src={SettingIcon} alt="" />
             <span>Settings</span>
-          </button>
-          <button>
+          </Link>
+          <Link className="link">
             <img src={LogoutIcon} alt="" />
             <span>Logout</span>
-          </button>
+          </Link>
         </div>
       </div>
       <div className="body">
