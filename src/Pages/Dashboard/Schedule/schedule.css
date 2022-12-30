@@ -75,3 +75,27 @@
 .vaccines button:hover {
     background: #A69BE7;
 }
+
+@media screen and (max-width: 768px) {
+    .hospital {
+        display: grid;
+    }
+
+    .hospital .box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hospital input {
+        width: 100%;
+    }
+
+    .vactype .box {
+        display: grid;
+    }
+
+    .vaccines button {
+        padding: 1rem;
+    }
+}

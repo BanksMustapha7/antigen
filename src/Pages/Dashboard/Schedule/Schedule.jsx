@@ -23,7 +23,7 @@ function Schedule() {
       </div>
 
       <div className="vaccinesType">
-        <div className="hospital vacType">
+        <div className="hospital vactype">
           <div className="box">
             <h3>Vaccination Type</h3>
             <small>Select the vaccination type you’ll like to get</small>
