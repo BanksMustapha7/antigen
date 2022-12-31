@@ -77,7 +77,7 @@ function Dashboard() {
         <hr />
 
         <div className="ul">
-          <Link to="home" className="link" onClick={mobileDir}>
+          <Link to="home" className="link">
             <img src={HomeIcon} alt="" />
             <span>Home</span>
           </Link>
@@ -99,12 +99,12 @@ function Dashboard() {
             <span>Blog</span>
           </Link>
 
-          <Link to="addchild" className="link" onClick={mobileDir}>
+          <Link to="addchild" className="link">
             <img src={Addicon} alt="" />
             <span>Add Child</span>
           </Link>
 
-          <Link to="profile" className="link" onClick={mobileDir}>
+          <Link to="profile" className="link">
             <img src={ProfileIcon} alt="" />
             <span>My Profile</span>
           </Link>
