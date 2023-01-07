@@ -123,7 +123,7 @@ function Dashboard() {
         <div className="topbar">
           <div>
             <button>
-              <img src={Notification} alt="notification" />
+              <Link to='notifications'><img src={Notification} alt="notification"/></Link>
             </button>
             <div className="user">
               <img src={User} alt="User" />
