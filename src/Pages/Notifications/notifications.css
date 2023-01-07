@@ -1,0 +1,134 @@
+.notifications {
+    width: 100%;
+    margin: auto;
+}
+
+.main {
+    padding: 0.2rem;
+}
+.topText{
+    border-bottom: 1px solid #BDBDBD;
+    padding-bottom: 16px;
+    width: 97%;
+    margin: auto;
+}
+
+.topText h1 {
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: #313163;
+    height:100%;
+    padding-bottom: 4px;
+}
+.topText p {
+    color: #4F4F4F;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.table {
+    width: 98%;
+    background-color: #fff;
+    margin: auto;
+    box-shadow: 2px 8px 20px rgba(181, 181, 181, 0.2);
+    border-collapse: separate;
+    max-height: 10vh;
+    position: relative;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.thead {
+    font-size: 18px;
+    text-align: justify;
+    color: #333;
+    opacity: 1;
+    height: 100%;
+}
+.th {
+    width: 20%;
+    align-items: center;
+    background-color: white;
+    z-index: 100;
+}
+
+.thText {
+    width: min-content;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 30px;
+    padding-top: 12px;
+    margin-bottom: 12px;
+}
+
+.tbody {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color: #4F4F4F;
+    border-collapse: collapse;
+}
+
+.td {
+    border-collapse: collapse ;
+    border-top: 1px solid #D6D9DF;
+    height: 80px;
+    text-align: justify;
+    margin-left: 28px;
+}
+
+.tdText {
+    margin-left: 30px;
+}
+
+.filterRow {
+    background-color: #0D0346;
+    width: 98%;
+    margin: auto;
+    padding: 11px;
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top: 14px;
+}
+
+.dateFilter {
+    box-sizing: border-box;
+    font-size: 15px;
+    width: 18vw;
+    height: 40px;
+    padding: 5px 0 8px 8px;
+    margin: 6px 0 8px 16px;
+    border-radius: 5px;
+    border: none;
+    color: #828282;
+}
+input:focus {
+    border: none;
+    outline: none;
+    padding: 4px;
+  }
+
+.optionFilter {
+    height: 40px;
+    font-size: 16px;
+    margin-right: 24px;
+    width: 12vw;
+    border-radius: 5px;
+    color: #828282;
+    padding: 5px 0 8px 8px;
+    margin: 6px 24px 8px 0px;
+}
+option {
+    color: #4C5059;
+    font-size: 16px;
+    height: 100px;
+}
