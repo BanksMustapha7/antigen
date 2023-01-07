@@ -11,6 +11,7 @@ import Home from "./Pages/Dashboard/Home/Home";
 import Profile from "./Pages/Dashboard/Profile/Profile";
 import Addchild from "./Pages/Dashboard/AddChild/Addchild";
 import Schedule from "./Pages/Dashboard/Schedule/Schedule";
+import { Notifications } from "./Pages/Notifications/Notifications";
 function App() {
   return (
     <div className="App">
@@ -29,6 +30,7 @@ function App() {
                 <Route path="profile" element={<Profile />} />
                 <Route path="addchild" element={<Addchild />} />
                 <Route path="schedule" element={<Schedule />} />
+                <Route path="notifications" element={<Notifications />} />
               </Route>
 
               {/* Protected Route  */}
