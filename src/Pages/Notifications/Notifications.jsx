@@ -26,7 +26,7 @@ export const Notifications = () => {
     <div className=' notifications'>
         <div className='topText'>
           <h1>Vaccination Appointment</h1>
-          <p>Your vaccination appointments are shown here</p>
+          <p>Your vaccination appointments are shown here.</p>
         </div>
 
         <Filters filter={globalFilter} setFilter={setGlobalFilter} />

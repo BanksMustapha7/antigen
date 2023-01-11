@@ -1,3 +1,8 @@
+body {
+    flex-direction: column;
+    display: flex;
+}
+
 .notifications {
     width: 100%;
     margin: auto;
@@ -20,6 +25,7 @@
     color: #313163;
     height:100%;
     padding-bottom: 4px;
+    position: sticky;
 }
 .topText p {
     color: #4F4F4F;
@@ -27,43 +33,46 @@
     font-size: 16px;
     margin-bottom: 4px;
 }
+.tableContainer {
+    width: 100%;
+    margin: auto;
+    background-color: white;
+}
 
 .table {
     width: 98%;
-    background-color: #fff;
     margin: auto;
+    background-color: #fff;
     box-shadow: 2px 8px 20px rgba(181, 181, 181, 0.2);
-    border-collapse: separate;
-    max-height: 10vh;
-    position: relative;
+    border-collapse: collapse;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
 .thead {
-    font-size: 18px;
     text-align: justify;
     color: #333;
-    opacity: 1;
     height: 100%;
+    background-color: white;
 }
 .th {
-    width: 20%;
     align-items: center;
     background-color: white;
-    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: auto;
 }
-
 .thText {
     width: min-content;
     font-family: 'Poppins';
-    font-style: normal;
+    font-style: 18px;
     font-weight: 600;
-    font-size: 18px;
+    font-size: medium;
     line-height: 24px;
     margin-left: 30px;
     padding-top: 12px;
     margin-bottom: 12px;
+    background-color: white;
 }
 
 .tbody {
@@ -71,21 +80,21 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0em;
     color: #4F4F4F;
-    border-collapse: collapse;
+    background-color: white;
 }
 
 .td {
-    border-collapse: collapse ;
     border-top: 1px solid #D6D9DF;
     height: 80px;
     text-align: justify;
     margin-left: 28px;
+    background-color: white;
 }
 
 .tdText {
     margin-left: 30px;
+    background-color: white;
 }
 
 .filterRow {
@@ -101,7 +110,6 @@
 }
 
 .dateFilter {
-    box-sizing: border-box;
     font-size: 15px;
     width: 18vw;
     height: 40px;
@@ -127,8 +135,62 @@ input:focus {
     padding: 5px 0 8px 8px;
     margin: 6px 24px 8px 0px;
 }
+select {
+    outline: none;
+}
 option {
     color: #4C5059;
     font-size: 16px;
     height: 100px;
+}
+.tbody .trBody > :first-child {
+    position: sticky;
+    z-index: 1;
+    left: 0;
+    background-color: white;
+}
+.thead .trHead > .th {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+}
+.thead .trHead > :first-child {
+    position: sticky;
+    z-index: 3;
+    left: 0;
+    top: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+    .filterRow {
+        width: 100%;
+        border-radius: 0;
+    }
+    .dateFilter {
+        width: 26vw;
+        margin: 5px;
+        font-size: 12px;
+        padding: 5px;
+    }
+    .optionFilter {
+        width: 25vw;
+        margin: 5px;
+    }
+    .tableContainer {
+        width: 100%;
+    }
+    .thText {
+        font-size: 16px;
+    }
+    .tdText {
+        font-size: 15.5px;
+    }
+    .topText h1 {
+        font-size: 26px;
+        margin-top: 5px;
+    }
+    .topText p {
+        font-size: 16px;
+    }
 }

@@ -2,7 +2,7 @@ import { format } from 'date-fns';
 export const COLUMNS = [
     {
         Header: 'Vaccination Type',
-        accessor: 'vaccination_type'
+        accessor: 'vaccination_type',
     },
     {
         Header: 'Hospital Name',
@@ -20,5 +20,5 @@ export const COLUMNS = [
     {
         Header: 'Appointment Time',
         accessor: 'appointment_time'
-    }
+    },
 ]
