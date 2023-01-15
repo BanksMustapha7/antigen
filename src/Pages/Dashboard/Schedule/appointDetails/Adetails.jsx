@@ -56,7 +56,7 @@ function Adetails() {
             </div>
 
             <button className="button">Book Appointment</button>
-          </div>{" "}
+          </div>
           || (<div>Success!!</div>)
         </div>
       )}
