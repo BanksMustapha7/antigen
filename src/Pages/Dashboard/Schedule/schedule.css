@@ -67,17 +67,27 @@
 
 .vaccines {
     display: grid;
+    height: 15rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .vaccines button {
     background-color: transparent;
     border-bottom: 1px solid #D6D9DF;
-    padding: .65rem;
+    padding: 1rem .65rem;
     cursor: pointer;
+    font-size: 14.5px;
 }
 
 .vaccines button:hover {
     background: #A69BE7;
+}
+
+@media screen and (min-width: 1660px) {
+    .vaccines {
+        height: max-content;
+    }
 }
 
 @media screen and (max-width: 768px) {

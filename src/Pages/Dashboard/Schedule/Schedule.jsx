@@ -43,30 +43,53 @@ function Schedule() {
           </div>
 
           <div className="vaccines">
-            <Link to="/dashboard/vaccination_appointment">
-              <button>Covid-19 Vaccine</button>
-            </Link>
-            <Link to="/dashboard/vaccination_appointment">
-              <button>Polio Vaccine</button>
-            </Link>
-            <Link to="/dashboard/vaccination_appointment">
-              <button>Monkeypx Vaccine</button>
-            </Link>
-            <Link to="/dashboard/vaccination_appointment">
-              <button>Hepatitis-A Vaccine</button>
-            </Link>
-            <Link to="/dashboard/vaccination_appointment">
-              <button>Hepatitis-B Vaccine</button>
-            </Link>
-            <Link to="/dashboard/vaccination_appointment">
-              <button>Smallpox vaccine</button>
-            </Link>
-            <Link to="/dashboard/vaccination_appointment">
-              <button>Measles Vaccine</button>
-            </Link>
-            <Link to="/dashboard/vaccination_appointment">
-              <button>Yellow Fever Vaccine</button>
-            </Link>
+            <button>
+              {" "}
+              <Link to="/dashboard/vaccination_appointment">
+                Covid-19 Vaccine{" "}
+              </Link>
+            </button>
+
+            <button>
+              {" "}
+              <Link to="/dashboard/vaccination_appointment">Polio Vaccine</Link>
+            </button>
+
+            <button>
+              <Link to="/dashboard/vaccination_appointment">
+                Monkeypx Vaccine{" "}
+              </Link>
+            </button>
+
+            <button>
+              <Link to="/dashboard/vaccination_appointment">
+                Hepatitis-A Vaccine{" "}
+              </Link>
+            </button>
+
+            <button>
+              <Link to="/dashboard/vaccination_appointment">
+                Hepatitis-B Vaccine
+              </Link>
+            </button>
+
+            <button>
+              <Link to="/dashboard/vaccination_appointment">
+                Smallpox vaccine{" "}
+              </Link>
+            </button>
+
+            <button>
+              <Link to="/dashboard/vaccination_appointment">
+                Measles Vaccine{" "}
+              </Link>
+            </button>
+
+            <button>
+              <Link to="/dashboard/vaccination_appointment">
+                Yellow Fever Vaccine{" "}
+              </Link>
+            </button>
           </div>
         </div>
       </div>

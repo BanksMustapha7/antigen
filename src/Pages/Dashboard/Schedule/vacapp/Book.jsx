@@ -1,5 +1,6 @@
 import React from "react";
 import "./book.css";
+import { Link } from "react-router-dom";
 import { Calendar } from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 function Book() {
@@ -16,10 +17,22 @@ function Book() {
         <div className="date">
           <h3>Select date</h3>
           <Calendar />
-          <button className="button">Proceed</button>
+          <button className="button">
+            <Link to="/dashboard/appointment_details"> Proceed</Link>
+          </button>
         </div>
 
-        <div className="time"></div>
+        <div className="time">
+          <h3>Select Time:</h3>
+          <div className="time">
+            <div className="info">
+              <h4>Morning</h4>
+              <small>9:00AM to 12:00PM</small>
+            </div>
+
+            <div className="time"></div>
+          </div>
+        </div>
       </div>
     </div>
   );

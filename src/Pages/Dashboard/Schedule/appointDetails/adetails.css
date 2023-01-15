@@ -1,0 +1,29 @@
+.adetails>.top {
+    border-bottom: 1px solid #ccc;
+    padding: .12rem;
+}
+
+.adetails .bodyy {
+    display: grid;
+    background-color: #fff;
+    padding: 1rem .65rem;
+    margin-top: 1rem;
+}
+
+.adetails .bodyy .body_tile {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px #ccc solid;
+    height: max-content;
+    padding: .65rem .5rem;
+}
+
+.adetails .body .button {
+    height: max-content;
+    width: max-content;
+    color: #fff;
+}
+
+.adetails .body .button:active {
+    transform: scale(.98);
+}

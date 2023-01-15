@@ -12,6 +12,7 @@ import Profile from "./Pages/Dashboard/Profile/Profile";
 import Addchild from "./Pages/Dashboard/AddChild/Addchild";
 import Schedule from "./Pages/Dashboard/Schedule/Schedule";
 import Book from "./Pages/Dashboard/Schedule/vacapp/Book";
+import Adetails from "./Pages/Dashboard/Schedule/appointDetails/Adetails";
 function App() {
   return (
     <div className="App">
@@ -31,6 +32,7 @@ function App() {
                 <Route path="addchild" element={<Addchild />} />
                 <Route path="schedule" element={<Schedule />} />
                 <Route path="vaccination_appointment" element={<Book />} />
+                <Route path="appointment_details" element={<Adetails />} />
               </Route>
 
               {/* Protected Route  */}

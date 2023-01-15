@@ -15,6 +15,17 @@
     font-size: 15px;
 }
 
+.book_body .react-calendar {
+    line-height: 1rem;
+}
+
+.react-calendar__tile,
+.react-calendar__tile--now,
+.react-calendar__year-view__months__month {
+    padding: .85rem !important;
+    font-size: .85rem;
+}
+
 .book_body .date .button {
     height: max-content;
     width: max-content;
