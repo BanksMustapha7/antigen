@@ -1,7 +1,11 @@
 .schedule {
+
+    padding: 2rem;
+}
+
+.schedule .stg1 {
     display: grid;
     gap: 2.5rem;
-    padding: 2rem;
 }
 
 .schedule .tabs {

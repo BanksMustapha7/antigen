@@ -1,0 +1,30 @@
+.book {}
+
+.book_body .date {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem 1rem;
+}
+
+.book .top {
+    border-bottom: 1px solid #ccc;
+    padding: 1.45rem 0;
+}
+
+.book .top {
+    font-size: 15px;
+}
+
+.book_body .date .button {
+    height: max-content;
+    width: max-content;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    background: #313163;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.book_body .date .button:active {
+    transform: scale(.98);
+}
