@@ -18,7 +18,13 @@ function Book() {
           <h3>Select date</h3>
           <Calendar />
           <button className="button">
-            <Link to="/dashboard/appointment_details"> Proceed</Link>
+            <Link
+              to="/dashboard/appointment_details"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              {" "}
+              Proceed
+            </Link>
           </button>
         </div>
 
