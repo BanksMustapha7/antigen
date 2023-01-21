@@ -1,7 +1,6 @@
 import React from "react";
 import "./book.css";
 import { Link } from "react-router-dom";
-import { Calendar } from "react-calendar";
 
 function Book() {
   return (
@@ -16,7 +15,7 @@ function Book() {
       <div className="book_body">
         <div className="date">
           <h3>Select date</h3>
-          <Calendar />
+        
           <button className="button">
             <Link
               to="/dashboard/appointment_details"
