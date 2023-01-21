@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./adetails.css";
 import Edit from "../../../../assets/edit.png";
 
@@ -63,7 +64,9 @@ function Adetails() {
           </button>
         </div>
 
-        <button className="book">Book Appointment</button>
+        <Link to="/dashboard/status">
+          <button className="book">Book Appointment</button>
+        </Link>
       </div>
     </div>
   );
