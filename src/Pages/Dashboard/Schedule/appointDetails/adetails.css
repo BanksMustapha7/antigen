@@ -37,3 +37,17 @@
 .adetails .bodyy button:active {
     transform: scale(.98);
 }
+
+@media screen and (max-width:600px) {
+    .adetails {
+        overflow-y: hidden;
+    }
+
+    .adetails>.top {
+        padding: 1.55rem 1.5rem;
+    }
+
+    .adetails .bodyy .book {
+        margin-top: 1rem;
+    }
+}
