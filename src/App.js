@@ -12,6 +12,7 @@ import Profile from "./Pages/Dashboard/Profile/Profile";
 import Addchild from "./Pages/Dashboard/AddChild/Addchild";
 import Schedule from "./Pages/Dashboard/Schedule/Schedule";
 import { Notifications } from "./Pages/Notifications/Notifications";
+import { LandingPage } from "./Pages/Landing page/LandingPage";
 function App() {
   return (
     <div className="App">
@@ -23,14 +24,15 @@ function App() {
 
               <Route index element={<Homepage />} />
               <Route path="/login" element={<LoginPage />} />
+              <Route path="/index" element={<LandingPage/>} />
               <Route path="/signup" element={<SignupPage />} />
               <Route path="/forgot_password" element={<Fp />} />
               <Route path="/Dashboard" element={<Dashboard />}>
                 <Route path="home" index element={<Home />} />
                 <Route path="profile" element={<Profile />} />
                 <Route path="addchild" element={<Addchild />} />
-                <Route path="schedule" element={<Schedule />} />
                 <Route path="notifications" element={<Notifications />} />
+                <Route path="schedule" element={<Schedule />} />
               </Route>
 
               {/* Protected Route  */}

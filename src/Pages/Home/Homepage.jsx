@@ -18,6 +18,9 @@ function Homepage() {
         <li>
           <Link to="/dashboard">Dashboard</Link>
         </li>
+        <li>
+          <Link to='/index'>Landing Page</Link>
+        </li>
       </ul>
     </div>
   );
