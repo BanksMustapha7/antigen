@@ -1,5 +1,52 @@
 .successpage {
+    position: relative;
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+}
+
+.successpage div {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+}
+
+.successpage div h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    color: #313163;
+}
+
+.successpage div h4 {
+    color: #828282;
+    font-weight: 400;
+}
+
+.successpage button {
+    height: max-content;
+    width: max-content;
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+
+    background: #313163;
+    border-radius: 15px;
+    font-size: 15px;
+    color: #fff;
+    padding: .55rem 2.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .successpage {
+        padding: 0 1.5rem;
+    }
+
+    .successpage div {
+        gap: 1.5rem
+    }
 }

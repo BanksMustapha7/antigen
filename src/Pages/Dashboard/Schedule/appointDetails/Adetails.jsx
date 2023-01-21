@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./adetails.css";
 import Edit from "../../../../assets/edit.png";
 
+
 function Adetails() {
   return (
     <div className="adetails">
