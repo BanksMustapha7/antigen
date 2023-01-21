@@ -2,7 +2,7 @@ import React from "react";
 import "./book.css";
 import { Link } from "react-router-dom";
 import { Calendar } from "react-calendar";
-import "react-calendar/dist/Calendar.css";
+
 function Book() {
   return (
     <div className="book">
