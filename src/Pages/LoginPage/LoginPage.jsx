@@ -48,7 +48,7 @@ console.log(userData);
         password: "",
       });
       // console.log(userData)
-      navigate("/Dashboard");
+      navigate("/Dashboard/home");
     } catch (error) {
       if (!error?.status) {
         setError("No Server Response");

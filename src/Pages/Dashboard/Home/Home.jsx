@@ -3,7 +3,15 @@ import "./home.css";
 import Welcome from "../../../assets/welcome.png";
 import Polio from "../../../assets/polio.png";
 import Covid from "../../../assets/covid.png";
+import { useSelector } from "react-redux";
+import { setFirstName, setLastName } from "../../../Redux/Auth/authSlice";
+
+
 function Home() {
+
+  const firstName = useSelector(setFirstName);
+  const lastName = useSelector(setLastName);
+
   const time = new Date().getHours();
   let greeting;
   if (time < 10) {
@@ -14,7 +22,7 @@ function Home() {
     greeting = "Good evening";
   }
 
-  const user = "Joshua Jide";
+  // const user = "Joshua Jide";
   return (
     <div className="home">
       <div className="top">
@@ -23,7 +31,7 @@ function Home() {
             <div className="card greet" style={{ background: "#fff" }}>
               <div>
                 <h2>
-                  {greeting}, <span>{user}</span>
+                  {greeting}, <span>{firstName}, {lastName}</span>
                 </h2>
                 <p>Welcome to Antigen!</p>
                 <button style={{ cursor: "pointer" }}>

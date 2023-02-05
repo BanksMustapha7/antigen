@@ -27,7 +27,7 @@ function App() {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/signup" element={<SignupPage />} />
               <Route path="/forgot_password" element={<Fp />} />
-              <Route path="/Dashboard" element={<Dashboard />}>
+              {/* <Route path="/Dashboard" element={<Dashboard />}>
                 <Route path="home" index element={<Home />} />
                 <Route path="profile" element={<Profile />} />
                 <Route path="addchild" element={<Addchild />} />
@@ -35,11 +35,20 @@ function App() {
                 <Route path="status" element={<Success />} />
                 <Route path="vaccination_appointment" element={<Book />} />
                 <Route path="appointment_details" element={<Adetails />} />
-              </Route>
+              </Route> */}
 
               {/* Protected Route  */}
               <Route element={<RequireAuth />}>
-                <Route path="/Dashboard" element={<Dashboard />} />
+                {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
+                <Route path="/Dashboard" element={<Dashboard />}>
+                  <Route path="home" index element={<Home />} />
+                  <Route path="profile" element={<Profile />} />
+                  <Route path="addchild" element={<Addchild />} />
+                  <Route path="schedule" element={<Schedule />} />
+                  <Route path="status" element={<Success />} />
+                  <Route path="vaccination_appointment" element={<Book />} />
+                  <Route path="appointment_details" element={<Adetails />} />
+                </Route>
               </Route>
             </Route>
           </Routes>

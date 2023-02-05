@@ -13,7 +13,8 @@ import Addicon from "../../assets/add.png";
 import Clock from "../../assets/clock.png";
 import Notification from "../../assets/notification.png";
 import User from "../../assets/user.png";
-import { Link, Outlet } from "react-router-dom";
+import Layout from "../../Components/Layout";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import {
   setCurrentUserEmail,
@@ -126,9 +127,9 @@ function Dashboard() {
               <img src={Notification} alt="notification" />
             </button>
             <div className="user">
-              <img src={User} alt="User" />
+              <img src={profilePic} alt="User" />
               <div className="">
-                <h4>John Doe</h4>
+                <h4>{firstName} {lastName}</h4>
                 <small>Patient</small>
               </div>
             </div>
@@ -136,7 +137,7 @@ function Dashboard() {
         </div>
 
         <div className="main">
-          <Outlet />
+          <Layout/>
         </div>
       </div>
     </div>
