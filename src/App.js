@@ -12,7 +12,7 @@ import Profile from "./Pages/Dashboard/Profile/Profile";
 import Addchild from "./Pages/Dashboard/AddChild/Addchild";
 import Schedule from "./Pages/Dashboard/Schedule/Schedule";
 import { Notifications } from "./Pages/Notifications/Notifications";
-import { LandingPage } from "./Pages/Landing page/LandingPage";
+import { Landingpage } from "./Pages/Landing page/Landingpage";
 function App() {
   return (
     <div className="App">
@@ -24,7 +24,7 @@ function App() {
 
               <Route index element={<Homepage />} />
               <Route path="/login" element={<LoginPage />} />
-              <Route path="/index" element={<LandingPage/>} />
+              <Route path="/index" element={<Landingpage/>} />
               <Route path="/signup" element={<SignupPage />} />
               <Route path="/forgot_password" element={<Fp />} />
               <Route path="/Dashboard" element={<Dashboard />}>
