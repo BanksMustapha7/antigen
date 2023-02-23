@@ -1,6 +1,7 @@
 import React from "react";
 import Userdetails from "../../../Components/UserDetails/Userdetails";
 import "./profile.css";
+
 function Profile() {
   return (
     <div className="profile">

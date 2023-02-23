@@ -1,8 +1,16 @@
 import React from "react";
 import "./book.css";
 import { Link } from "react-router-dom";
+import { DatePicker, Space } from 'antd';
+
+const onChange = (date, dateString) => {
+  console.log(date, dateString);
+};
+
 
 function Book() {
+
+
   return (
     <div className="book">
       <div className="top">
@@ -15,6 +23,8 @@ function Book() {
       <div className="book_body">
         <div className="date">
           <h3>Select date</h3>
+
+          <DatePicker onChange={onChange} />
 
           <button className="button">
             <Link
