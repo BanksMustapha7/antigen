@@ -22,7 +22,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Layout />}>
               {/* Public Routes */}
-
               <Route index element={<Homepage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/signup" element={<SignupPage />} />
@@ -36,7 +35,6 @@ function App() {
                 <Route path="vaccination_appointment" element={<Book />} />
                 <Route path="appointment_details" element={<Adetails />} />
               </Route> */}
-
               {/* Protected Route  */}
               <Route element={<RequireAuth />}>
                 {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
@@ -50,6 +48,7 @@ function App() {
                   <Route path="appointment_details" element={<Adetails />} />
                 </Route>
               </Route>
+              {/**</Route> */}
             </Route>
           </Routes>
         </Router>

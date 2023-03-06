@@ -1,9 +1,22 @@
-.book {}
+.book {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-.book_body .date {
+.book_body {
+    display: grid;
+    gap: 3rem
+}
+
+.book_body .sub {
     display: flex;
-    justify-content: space-around;
     padding: 1.5rem 1rem;
+    gap: 1rem;
+    align-items: top;
+}
+
+.h3-info {
+    font-weight: 400;
+    margin-right: 2rem;
 }
 
 .book .top {
@@ -29,13 +42,44 @@
 .book_body .date .button {
     height: max-content;
     width: max-content;
-    padding: 1rem 1.5rem;
+    padding: .5rem 1.5rem;
     border-radius: 10px;
     background: #313163;
-    border-radius: 15px;
+    border-radius: 10px;
     color: #fff;
+    position: absolute;
+    right: 10%;
 }
 
 .book_body .date .button:active {
     transform: scale(.98);
+}
+
+.book_body .time h4 {
+    font-size: 14px;
+}
+
+.book_body .time small {
+    font-size: 12px;
+    margin-top: -5px;
+}
+
+.book_body .time .box {
+    background-color: #fff;
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+}
+
+.book_body .time .box .options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.book_body .time .box .timeOptions {
+    padding: .25rem .65rem;
+    border-radius: 4px;
+    border: 1px solid #A69BE7;
 }
