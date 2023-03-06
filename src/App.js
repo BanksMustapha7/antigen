@@ -48,7 +48,6 @@ function App() {
                   <Route path="appointment_details" element={<Adetails />} />
                 </Route>
               </Route>
-              {/**</Route> */}
             </Route>
           </Routes>
         </Router>
