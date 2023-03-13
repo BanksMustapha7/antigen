@@ -4,13 +4,34 @@ import Welcome from "../../../assets/welcome.png";
 import Polio from "../../../assets/polio.png";
 import Covid from "../../../assets/covid.png";
 import { useSelector } from "react-redux";
-import { setFirstName, setLastName } from "../../../Redux/Auth/authSlice";
-
+import {
+  setFirstName,
+  setLastName,
+  setUserId,
+} from "../../../Redux/Auth/authSlice";
+import { useGetvaccinationsQuery } from "../../../Redux/Vaccinations/vaccinationApiSlice";
 
 function Home() {
-
   const firstName = useSelector(setFirstName);
   const lastName = useSelector(setLastName);
+  const userId = useSelector(setUserId);
+
+  const {
+    data: vaccinationSchedules,
+    isLoading,
+    isError,
+  } = useGetvaccinationsQuery(userId);
+  console.log(vaccinationSchedules);
+
+  // const pending = vaccinationSchedules.data.filter((e) => {
+  //   if (e.vaccinationStatus === "Pending") {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // });
+
+  // let noOfPending = pending.length;
 
   const time = new Date().getHours();
   let greeting;
@@ -31,14 +52,17 @@ function Home() {
             <div className="card greet" style={{ background: "#fff" }}>
               <div>
                 <h2>
-                  {greeting}, <span>{firstName}, {lastName}</span>
+                  {greeting},{" "}
+                  <span>
+                    {firstName}, {lastName}
+                  </span>
                 </h2>
                 <p>Welcome to Antigen!</p>
                 <button style={{ cursor: "pointer" }}>
                   Chat with a doctor
                 </button>
               </div>
-              <img src={Welcome} alt="welcome" srcset="" />
+              <img src={Welcome} alt="welcome" srcSet="" />
             </div>
           </div>
 
@@ -50,18 +74,41 @@ function Home() {
                 style={{ backgroundColor: "#084482" }}
               >
                 <h4>TOTAL VACCINES GOTTEN</h4>
-                <h3>14</h3>
+                <h3>
+                  {isLoading ? "Loading" : vaccinationSchedules.data.length}
+                </h3>
               </div>
               <div
                 className="card count"
                 style={{ backgroundColor: "#003265" }}
               >
                 <h4>NUMBER OF PENDING VACCINES</h4>
-                <h3>7</h3>
+                <h3>
+                  {isLoading
+                    ? "Loading..."
+                    : vaccinationSchedules.data.filter((e) => {
+                        if (e.vaccinationStatus === "Pending") {
+                          return true;
+                        } else {
+                          return false;
+                        }
+                      }).length}
+                </h3>
               </div>
               <div className="card count" style={{ background: "#042241" }}>
                 <h4>SUCCESS VACCINATION</h4>
-                <h3>7</h3>
+                <h3>
+                  {" "}
+                  {isLoading
+                    ? "Loading..."
+                    : vaccinationSchedules.data.filter((e) => {
+                        if (e.vaccinationStatus === "Success") {
+                          return true;
+                        } else {
+                          return false;
+                        }
+                      }).length}
+                </h3>
               </div>
             </div>
           </div>

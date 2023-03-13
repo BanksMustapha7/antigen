@@ -1,8 +1,83 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import {
+  setCurrentUserEmail,
+  setFirstName,
+  setLastName,
+  setUserId,
+} from "../../../Redux/Auth/authSlice";
+import {
+  updateVaccinationDetails,
+} from "../../../Redux/VaccinationSchedule/vaccinationDetailsSlice";
 import "./schedule.css";
 function Schedule() {
-  const [hospital, setHospital] = useState();
+  const vaccines = [
+    {
+      id: 1,
+      vaccineName: "Covid-19 Vaccine",
+    },
+    {
+      id: 2,
+      vaccineName: "Polio Vaccine",
+    },
+    {
+      id: 3,
+      vaccineName: "Monkeypx Vaccine",
+    },
+    {
+      id: 4,
+      vaccineName: "Hepatitis-A Vaccine",
+    },
+    {
+      id: 5,
+      vaccineName: "Hepatitis-B Vaccine",
+    },
+    {
+      id: 6,
+      vaccineName: " Smallpox vaccine",
+    },
+    {
+      id: 7,
+      vaccineName: "Measles Vaccine",
+    },
+    {
+      id: 8,
+      vaccineName: "Yellow Fever Vaccine",
+    },
+  ];
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const email = useSelector(setCurrentUserEmail);
+  const userId = useSelector(setUserId);
+  const firstName = useSelector(setFirstName);
+  const lastName = useSelector(setLastName);
+  const [hospitalName, setHospital] = useState("");
+
+  const moveToNextPage = (selectedVaccineName) => {
+    if (hospitalName === "") {
+      alert("Please Provide An hospital name");
+      return;
+    }
+
+    console.log(firstName, lastName);
+
+    const userVaccinationData = {
+      patientName: `${firstName} ${lastName}`,
+      patientId: userId,
+      patientEmail: email,
+      vaccinationType: selectedVaccineName,
+      hospitalName: `${hospitalName}`,
+      appointmentDate: "",
+      appointmentTime: "",
+      vaccineDescription: "",
+    };
+
+    console.log(userVaccinationData);
+    dispatch(updateVaccinationDetails(userVaccinationData));
+    navigate("/dashboard/vaccination_appointment");
+  };
+
   return (
     <div className="schedule">
       <div className="stg1">
@@ -22,7 +97,7 @@ function Schedule() {
             name="hospitals"
             id=""
             placeholder="search for hospital"
-            onChange={(e) => setHospital(e)}
+            onChange={(e) => setHospital(e.target.value)}
           />
         </div>
 
@@ -43,53 +118,13 @@ function Schedule() {
           </div>
 
           <div className="vaccines">
-            <button>
-              {" "}
-              <Link to="/dashboard/vaccination_appointment">
-                Covid-19 Vaccine{" "}
-              </Link>
-            </button>
-
-            <button>
-              {" "}
-              <Link to="/dashboard/vaccination_appointment">Polio Vaccine</Link>
-            </button>
-
-            <button>
-              <Link to="/dashboard/vaccination_appointment">
-                Monkeypx Vaccine{" "}
-              </Link>
-            </button>
-
-            <button>
-              <Link to="/dashboard/vaccination_appointment">
-                Hepatitis-A Vaccine{" "}
-              </Link>
-            </button>
-
-            <button>
-              <Link to="/dashboard/vaccination_appointment">
-                Hepatitis-B Vaccine
-              </Link>
-            </button>
-
-            <button>
-              <Link to="/dashboard/vaccination_appointment">
-                Smallpox vaccine{" "}
-              </Link>
-            </button>
-
-            <button>
-              <Link to="/dashboard/vaccination_appointment">
-                Measles Vaccine{" "}
-              </Link>
-            </button>
-
-            <button>
-              <Link to="/dashboard/vaccination_appointment">
-                Yellow Fever Vaccine{" "}
-              </Link>
-            </button>
+            {vaccines.map(({ id, vaccineName }) => {
+              return (
+                <button key={id} onClick={() => moveToNextPage(vaccineName)}>
+                  {vaccineName}
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -82,4 +82,5 @@
     padding: .25rem .65rem;
     border-radius: 4px;
     border: 1px solid #A69BE7;
+    cursor: pointer;
 }

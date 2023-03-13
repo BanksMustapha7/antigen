@@ -38,15 +38,17 @@ function LoginPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // console.log(Boolean(error))
+    
     try {
       const { email, password } = details;
       const userData = await login({ email, password }).unwrap();
-console.log(userData);
+      console.log(userData);
       dispatch(setCredentials({ ...userData }));
       setDetails({
         email: "",
         password: "",
       });
+
       // console.log(userData)
       navigate("/Dashboard/home");
     } catch (error) {
@@ -131,7 +133,6 @@ console.log(userData);
 }
 
 export default LoginPage;
-
 
 /*
 Note

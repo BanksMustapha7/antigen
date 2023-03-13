@@ -37,12 +37,7 @@ function Dashboard() {
 
   // console.log(user);
 
-  const {
-    data: vaccinationSchedules,
-    isLoading,
-    isError,
-  } = useGetvaccinationsQuery(userId);
-  console.log(vaccinationSchedules);
+  
   console.log("email", email);
   console.log("First Name:", firstName);
   console.log("Last Name:", lastName);

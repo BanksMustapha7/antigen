@@ -1,9 +1,42 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { updatedVaccineDetails } from "../../../../Redux/VaccinationSchedule/vaccinationDetailsSlice";
+import { useNavigate } from "react-router-dom";
 import "./adetails.css";
 import Edit from "../../../../assets/edit.png";
+import { useSelector } from "react-redux";
+import { useCreateVaccinationMutation } from "../../../../Redux/VaccinationSchedule/vaccinationDetailsApiSlice";
 
 function Adetails() {
+  const navigate = useNavigate();
+  const updatedUserVaccineDetails = useSelector(updatedVaccineDetails);
+  console.log(updatedUserVaccineDetails);
+
+  const {
+    hospitalName,
+    vaccinationType,
+    patientName,
+    appointmentDate,
+    appointmentTime,
+  } = updatedUserVaccineDetails;
+
+  const [createVaccination, { isLoading, isError, isSuccess }] =
+    useCreateVaccinationMutation();
+
+  const bookAppointment = async () => {
+    //I am only consoling the error in case there is one, You should do a better error handling
+    try {
+      await createVaccination({ ...updatedUserVaccineDetails })
+        .unwrap()
+        .then(() => {
+          console.log("Fufilled");
+          navigate("/dashboard/status");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (error) {}
+  };
+
   return (
     <div className="adetails">
       <div className="top">
@@ -14,7 +47,7 @@ function Adetails() {
         <div className="body_tile">
           <div className="">
             <h4>Hospital Name</h4>
-            <small>LASUTH</small>
+            <small>{hospitalName}</small>
           </div>
 
           <button className="edit">
@@ -25,7 +58,7 @@ function Adetails() {
         <div className="body_tile">
           <div className="">
             <h4>Vaccination Type</h4>
-            <small>COVID-19 Vaccine</small>
+            <small>{vaccinationType}</small>
           </div>
 
           <button className="edit">
@@ -36,7 +69,7 @@ function Adetails() {
         <div className="body_tile">
           <div className="">
             <h4>Patient Name</h4>
-            <small>Joshua Jide</small>
+            <small>{patientName}</small>
           </div>
 
           <button className="edit">
@@ -46,7 +79,8 @@ function Adetails() {
         <div className="body_tile">
           <div className="">
             <h4>Appointment Date</h4>
-            <small>8th of August, 2022</small>
+            <small>{appointmentDate}</small>
+            {/* <small>8th of August, 2022</small> */}
           </div>
 
           <button className="edit">
@@ -56,7 +90,7 @@ function Adetails() {
         <div className="body_tile">
           <div className="">
             <h4>Time</h4>
-            <small>9:00Am</small>
+            <small>{appointmentTime}</small>
           </div>
 
           <button className="edit">
@@ -64,9 +98,9 @@ function Adetails() {
           </button>
         </div>
 
-        <Link to="/dashboard/status">
-          <button className="book">Book Appointment</button>
-        </Link>
+        <button className="book" onClick={bookAppointment}>
+          {isLoading ? "Processing...." : "Book Appointment"}
+        </button>
       </div>
     </div>
   );
