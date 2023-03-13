@@ -23,16 +23,6 @@ function Home() {
   } = useGetvaccinationsQuery(userId);
   console.log(vaccinationSchedules);
 
-  // const pending = vaccinationSchedules.data.filter((e) => {
-  //   if (e.vaccinationStatus === "Pending") {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // });
-
-  // let noOfPending = pending.length;
-
   const time = new Date().getHours();
   let greeting;
   if (time < 10) {
@@ -140,3 +130,7 @@ function Home() {
 }
 
 export default Home;
+
+
+
+// I used "Loading" while the number of vaccines is still loading. You should probably make use of a much better approach maybe spinner or something

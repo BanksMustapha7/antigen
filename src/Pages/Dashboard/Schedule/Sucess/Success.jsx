@@ -31,3 +31,7 @@ function Success() {
 }
 
 export default Success;
+
+/*
+I think this page can be made to look much better generally
+*/

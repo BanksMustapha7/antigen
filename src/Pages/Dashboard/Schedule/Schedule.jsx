@@ -133,3 +133,11 @@ function Schedule() {
 }
 
 export default Schedule;
+
+/*
+I don't know how many hospital, tesla has in mind to work with, but what I did on this page is quite simple
+It is the name the user types in that they put as the hospital name
+so what you can do is have an array of hospitals, once a user types in a name, they get suggestions from that hospital names array
+And then they can easily click on the hospital  name and select.
+This also implies that you will need to do some validation check too to confirm if the user actually chooses a hospital name from the names in the array, you get?
+*/

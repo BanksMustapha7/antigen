@@ -47,6 +47,7 @@ function Book() {
 
   const progressToFinalPage = () => {
     //I added the alerts here so you can do proper error handling and form validation
+    // You will need to do some date and time validation to kick against a user inputting a date in the past, you get?
     if (chosenTime === null) {
       alert("Please select a time!!");
       return;

@@ -107,3 +107,8 @@ function Adetails() {
 }
 
 export default Adetails;
+
+/*
+ I dont know what the plan for those edit icons are. You might want to reach out to the UI/UX designer.
+ Also, in place of that processing text I used when the vaccine appointment is still loading, you might want to implement a spinner.
+*/
