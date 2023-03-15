@@ -13,6 +13,8 @@ import Addchild from "./Pages/Dashboard/AddChild/Addchild";
 import Schedule from "./Pages/Dashboard/Schedule/Schedule";
 import { Notifications } from "./Pages/Notifications/Notifications";
 import { Landingpage } from "./Pages/Landing page/Landingpage";
+import { AdminDashboard } from "./Pages/Admin Dashboard/Dashboard";
+import { Overview } from "./Pages/Admin Dashboard/Overview/Overview";
 function App() {
   return (
     <div className="App">
@@ -33,6 +35,9 @@ function App() {
                 <Route path="addchild" element={<Addchild />} />
                 <Route path="notifications" element={<Notifications />} />
                 <Route path="schedule" element={<Schedule />} />
+              </Route>
+              <Route path="admindashboard" element={<AdminDashboard />}>
+                <Route path="overview" element={<Overview />} />
               </Route>
 
               {/* Protected Route  */}

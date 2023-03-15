@@ -1,0 +1,1 @@
+export const names = ["Adelanke Adelanke", "Adelanke Adelanke", "Adelanke Adelanke","Adelanke Adelanke","Adelanke Adelanke","Adelanke Adelanke"]

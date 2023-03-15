@@ -1,0 +1,19 @@
+    /*Customised the Scroll bar for when the list of patients or children increases past the max height so as to prevent full page scrolling */
+.scroll::-webkit-scrollbar {
+    width: 8px;
+    height: 12px;
+    }
+    
+.scroll::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 5px;
+    }
+    
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #313163;  
+    }
+    
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: #313163;  
+    }
