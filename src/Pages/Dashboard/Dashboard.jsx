@@ -13,6 +13,7 @@ import Addicon from "../../assets/add.png";
 import Clock from "../../assets/clock.png";
 import Notification from "../../assets/notification.png";
 import User from "../../assets/user.png";
+<<<<<<< HEAD
 import Layout from "../../Components/Layout";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -23,12 +24,21 @@ import {
   setProfilePic,
   setUserId,
 } from "../../Redux/Auth/authSlice";
+=======
+import Home from "./Home/Home";
+import { useSelector } from "react-redux";
+import {  setCurrentUserEmail, setFirstName, setLastName, setProfilePic, setUserId } from "../../Redux/Auth/authSlice";
+>>>>>>> Abdullah
 import { useGetvaccinationsQuery } from "../../Redux/Vaccinations/vaccinationApiSlice";
 
 function Dashboard() {
   const [close, setClose] = useState(true);
   const [direction, setDirection] = useState(true);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Abdullah
   const email = useSelector(setCurrentUserEmail);
   const firstName = useSelector(setFirstName);
   const lastName = useSelector(setLastName);
@@ -37,8 +47,14 @@ function Dashboard() {
 
   // console.log(user);
 
+<<<<<<< HEAD
   
   console.log("email", email);
+=======
+  const { data: vaccinationSchedules, isLoading, isError } = useGetvaccinationsQuery(userId);
+  console.log(vaccinationSchedules);
+  console.log("email", email)
+>>>>>>> Abdullah
   console.log("First Name:", firstName);
   console.log("Last Name:", lastName);
   console.log("Profile Picture:", profilePic);
@@ -141,10 +157,18 @@ function Dashboard() {
 
 export default Dashboard;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Abdullah
 /*
 Note
 
 Here You have all the details you need already. The Firsname, last name, email, profile picture
 - For the section where you have to display the vaccinations, the successful and pending ones, I will suggest you do a client side sorting to differentiate which is successful and which is pending.
 There is a vaccination status key that is returned from the api so you can use that to sort.
+<<<<<<< HEAD
 */
+=======
+*/
+>>>>>>> Abdullah
