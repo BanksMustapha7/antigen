@@ -38,19 +38,31 @@ function LoginPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // console.log(Boolean(error))
+<<<<<<< HEAD
     
     try {
       const { email, password } = details;
       const userData = await login({ email, password }).unwrap();
       console.log(userData);
+=======
+    try {
+      const { email, password } = details;
+      const userData = await login({ email, password }).unwrap();
+console.log(userData);
+>>>>>>> Abdullah
       dispatch(setCredentials({ ...userData }));
       setDetails({
         email: "",
         password: "",
       });
+<<<<<<< HEAD
 
       // console.log(userData)
       navigate("/Dashboard/home");
+=======
+      // console.log(userData)
+      navigate("/Dashboard");
+>>>>>>> Abdullah
     } catch (error) {
       if (!error?.status) {
         setError("No Server Response");
@@ -134,6 +146,10 @@ function LoginPage() {
 
 export default LoginPage;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Abdullah
 /*
 Note
 - I have done the routing to the dashboard page
@@ -141,4 +157,8 @@ Note
 I have set the errors with their appropriate responses.
 All you need to do here is to choose where to display them.
 
+<<<<<<< HEAD
 */
+=======
+*/
+>>>>>>> Abdullah
