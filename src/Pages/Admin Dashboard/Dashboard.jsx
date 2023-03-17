@@ -9,7 +9,7 @@ import overview from '../../assets/Overview.png'
 import SettingIcon from "../../assets/settingicon.png";
 import Notification from "../../assets/notification.png";
 import User from "../../assets/user.png";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import {
   setCurrentUserEmail,
@@ -55,6 +55,12 @@ export function AdminDashboard() {
     changeD: { right: "-1.5rem", transform: "rotate(180deg)" },
   };
 
+  const navLinkStyles = ({isActive}) => {
+    return {
+      backgroundColor: isActive ? '#A69BE7' : '',
+    }
+  }
+
   return (
     <div className="dashboard">
       <div className={`sidebar + ${close ? "mobileSlide" : ""}`}>
@@ -63,7 +69,7 @@ export function AdminDashboard() {
           alt="sidebar"
           className="open"
           onClick={closeMenu}
-          style={direction === true ? styles.changeD : { display: "block" }}
+          style={direction === true ? styles.changeD : {  display: "block", }}
         />
 
         <div className="logo">
@@ -73,27 +79,27 @@ export function AdminDashboard() {
         <hr />
 
         <div className="ul">
-          <Link to="overview" className="link" onClick={mobileDir}>
+          <NavLink to="/admindashboard" style={navLinkStyles} className="link">
             <img src={overview} alt="" />
             <span>Overview</span>
-          </Link>
+          </NavLink>
 
-          <Link className="link" to="patient">
+          <NavLink style={navLinkStyles} className="link" to="patient">
             <img src={patients} alt="" />
             <span>Patients</span>
-          </Link>
-          <Link className="link">
+          </NavLink>
+          <NavLink style={navLinkStyles} className="link" to="/children">
             <img src={add} alt="" />
             <span>Children</span>
-          </Link>
-          <Link className="link">
+          </NavLink>
+          <NavLink style={navLinkStyles} className="link" to="settings">
             <img src={SettingIcon} alt="" />
             <span>Settings</span>
-          </Link>
-          <Link className="link" to="/login">
+          </NavLink>
+          <NavLink style={navLinkStyles} className="link" to="/login">
             <img src={LogoutIcon} alt="" />
             <span>Logout</span>
-          </Link>
+          </NavLink>
         </div>
       </div>
       <div className="body">

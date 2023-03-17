@@ -4,6 +4,7 @@ import add from '../../../assets/addpurple.png'
 import syringe from '../../../assets/dashboardsyringe.png'
 import hospital from '../../../assets/hospital.png'
 import './scrollbar.css'
+import { Link } from 'react-router-dom'
 
 export const Overview = () => {
   return (
@@ -50,7 +51,7 @@ export const Overview = () => {
                                     <div className=' flex flex-nowrap items-center gap-2'><img className='rounded-md' width='42px' src={require(`../../../assets/faces/${currentFace}.jpg`)}/> <p className='text-[#353A45] font-light lg:font-bold'>{name}</p></div>
                                     <div className='flex flex-nowrap md:gap-6 gap-2 '>
                                         <p className='text-[#353A45]'>Active</p>
-                                        <p className='text-[#313163]'><a href="">View Details</a></p>
+                                        <p className='text-[#313163]'><Link to="patient-details">View Details</Link></p>
                                     </div>
                                 </div>
                             )
@@ -72,7 +73,7 @@ export const Overview = () => {
                                     <div className=' flex flex-nowrap items-center gap-2'><img className='rounded-md' width='42px' src={require(`../../../assets/faces/${currentFace}.jpg`)}/> <p className='text-[#353A45] font-light lg:font-bold'>{name}</p></div>
                                     <div className='flex flex-nowrap md:gap-6 gap-2 '>
                                         <p className='text-[#353A45]'>Active</p>
-                                        <p className='text-[#313163]'><a href="">View Details</a></p>
+                                        <p className='text-[#313163]'><Link to="child-details">View Details</Link></p>
                                     </div>
                                 </div>
                             )
